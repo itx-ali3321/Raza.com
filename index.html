@@ -1,18 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ali Raza | Data Entry Specialist & Virtual Assistant</title>
-    <meta name="description" content="Professional Data Entry Specialist offering accurate data processing, lead generation, email collection, and web research services. 5+ years experience with 99.9% accuracy.">
-    <meta name="keywords" content="Data Entry, Virtual Assistant, Lead Generation, Email Collection, Web Research, Data Processing, Freelancer, Pakistan">
+    <meta name="description"
+        content="Professional Data Entry Specialist offering accurate data processing, lead generation, email collection, and web research services. 5+ years experience with 99.9% accuracy.">
+    <meta name="keywords"
+        content="Data Entry, Virtual Assistant, Lead Generation, Email Collection, Web Research, Data Processing, Freelancer, Pakistan">
     <meta name="author" content="Ali Raza">
     <meta property="og:title" content="Ali Raza | Data Entry Specialist">
-    <meta property="og:description" content="Professional Data Entry Services with 99.9% Accuracy. 100+ Projects Completed.">
+    <meta property="og:description"
+        content="Professional Data Entry Services with 99.9% Accuracy. 100+ Projects Completed.">
     <meta property="og:type" content="website">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <style>
@@ -27,17 +33,17 @@
             --gray: #64748b;
             --border: #e2e8f0;
         }
-        
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         html {
             scroll-behavior: smooth;
         }
-        
+
         body {
             font-family: 'Inter', sans-serif;
             background: var(--light);
@@ -45,12 +51,17 @@
             line-height: 1.6;
             overflow-x: hidden;
         }
-        
-        h1, h2, h3, h4, h5, h6 {
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
             font-family: 'Poppins', sans-serif;
             font-weight: 600;
         }
-        
+
         /* Navigation */
         .navbar {
             position: fixed;
@@ -63,11 +74,11 @@
             border-bottom: 1px solid var(--border);
             transition: all 0.3s ease;
         }
-        
+
         .navbar.scrolled {
             box-shadow: 0 4px 30px rgba(0, 0, 0, 0.08);
         }
-        
+
         .nav-container {
             max-width: 1280px;
             margin: 0 auto;
@@ -76,7 +87,7 @@
             justify-content: space-between;
             align-items: center;
         }
-        
+
         .logo {
             font-family: 'Poppins', sans-serif;
             font-size: 1.5rem;
@@ -84,17 +95,17 @@
             color: var(--primary);
             text-decoration: none;
         }
-        
+
         .logo span {
             color: var(--gold);
         }
-        
+
         .nav-links {
             display: flex;
             gap: 2.5rem;
             list-style: none;
         }
-        
+
         .nav-links a {
             text-decoration: none;
             color: var(--gray);
@@ -103,7 +114,7 @@
             transition: color 0.3s ease;
             position: relative;
         }
-        
+
         .nav-links a::after {
             content: '';
             position: absolute;
@@ -114,15 +125,15 @@
             background: var(--primary);
             transition: width 0.3s ease;
         }
-        
+
         .nav-links a:hover {
             color: var(--primary);
         }
-        
+
         .nav-links a:hover::after {
             width: 100%;
         }
-        
+
         .nav-cta {
             background: var(--primary);
             color: white;
@@ -132,12 +143,12 @@
             font-weight: 500;
             transition: all 0.3s ease;
         }
-        
+
         .nav-cta:hover {
             background: var(--primary-light);
             transform: translateY(-2px);
         }
-        
+
         .mobile-menu-btn {
             display: none;
             background: none;
@@ -145,7 +156,7 @@
             cursor: pointer;
             color: var(--primary);
         }
-        
+
         /* Hero Section */
         .hero {
             min-height: 100vh;
@@ -156,7 +167,7 @@
             overflow: hidden;
             padding-top: 80px;
         }
-        
+
         .hero::before {
             content: '';
             position: absolute;
@@ -167,7 +178,7 @@
             background: radial-gradient(circle, rgba(30, 58, 95, 0.05) 0%, transparent 70%);
             border-radius: 50%;
         }
-        
+
         .hero-container {
             max-width: 1280px;
             margin: 0 auto;
@@ -179,7 +190,7 @@
             position: relative;
             z-index: 1;
         }
-        
+
         .hero-badge {
             display: inline-flex;
             align-items: center;
@@ -192,7 +203,7 @@
             font-weight: 500;
             margin-bottom: 1.5rem;
         }
-        
+
         .hero-badge .dot {
             width: 8px;
             height: 8px;
@@ -200,24 +211,31 @@
             border-radius: 50%;
             animation: pulse 2s infinite;
         }
-        
+
         @keyframes pulse {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.5; }
+
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.5;
+            }
         }
-        
+
         .hero h1 {
             font-size: 3.5rem;
             line-height: 1.2;
             margin-bottom: 1.5rem;
             color: var(--dark);
         }
-        
+
         .hero h1 .highlight {
             color: var(--primary);
             position: relative;
         }
-        
+
         .hero h1 .highlight::after {
             content: '';
             position: absolute;
@@ -228,20 +246,20 @@
             background: rgba(212, 175, 55, 0.3);
             z-index: -1;
         }
-        
+
         .hero-subtitle {
             font-size: 1.25rem;
             color: var(--gray);
             margin-bottom: 2rem;
             max-width: 500px;
         }
-        
+
         .hero-buttons {
             display: flex;
             gap: 1rem;
             margin-bottom: 3rem;
         }
-        
+
         .btn-primary {
             background: var(--primary);
             color: white;
@@ -257,13 +275,13 @@
             cursor: pointer;
             font-size: 1rem;
         }
-        
+
         .btn-primary:hover {
             background: var(--primary-light);
             transform: translateY(-2px);
             box-shadow: 0 10px 30px rgba(30, 58, 95, 0.2);
         }
-        
+
         .btn-secondary {
             background: white;
             color: var(--primary);
@@ -277,36 +295,36 @@
             border: 2px solid var(--primary);
             transition: all 0.3s ease;
         }
-        
+
         .btn-secondary:hover {
             background: var(--primary);
             color: white;
         }
-        
+
         .hero-stats {
             display: flex;
             gap: 2.5rem;
             padding-top: 2rem;
             border-top: 1px solid var(--border);
         }
-        
+
         .stat-item h3 {
             font-size: 2rem;
             color: var(--primary);
             margin-bottom: 0.25rem;
         }
-        
+
         .stat-item p {
             color: var(--gray);
             font-size: 0.875rem;
         }
-        
+
         .hero-image {
             position: relative;
             display: flex;
             justify-content: center;
         }
-        
+
         .hero-image img {
             width: 400px;
             height: 400px;
@@ -314,7 +332,7 @@
             border-radius: 20px;
             box-shadow: 0 25px 60px rgba(0, 0, 0, 0.15);
         }
-        
+
         .floating-card {
             position: absolute;
             background: white;
@@ -325,25 +343,32 @@
             align-items: center;
             gap: 0.75rem;
         }
-        
+
         .floating-card.card-1 {
             bottom: 30px;
             left: -20px;
             animation: float 4s ease-in-out infinite;
         }
-        
+
         .floating-card.card-2 {
             top: 30px;
             right: -20px;
             animation: float 4s ease-in-out infinite;
             animation-delay: 2s;
         }
-        
+
         @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-15px); }
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-15px);
+            }
         }
-        
+
         .floating-card .icon {
             width: 40px;
             height: 40px;
@@ -354,32 +379,32 @@
             justify-content: center;
             color: white;
         }
-        
+
         .floating-card .text h4 {
             font-size: 0.875rem;
             color: var(--dark);
         }
-        
+
         .floating-card .text p {
             font-size: 0.75rem;
             color: var(--gray);
         }
-        
+
         /* Section Styles */
         .section {
             padding: 6rem 2rem;
         }
-        
+
         .section-container {
             max-width: 1280px;
             margin: 0 auto;
         }
-        
+
         .section-header {
             text-align: center;
             margin-bottom: 4rem;
         }
-        
+
         .section-label {
             display: inline-flex;
             align-items: center;
@@ -391,7 +416,7 @@
             letter-spacing: 1px;
             margin-bottom: 1rem;
         }
-        
+
         .section-label::before,
         .section-label::after {
             content: '';
@@ -399,42 +424,42 @@
             height: 2px;
             background: var(--gold);
         }
-        
+
         .section-title {
             font-size: 2.5rem;
             color: var(--dark);
             margin-bottom: 1rem;
         }
-        
+
         .section-subtitle {
             color: var(--gray);
             max-width: 600px;
             margin: 0 auto;
         }
-        
+
         /* About Section */
         .about {
             background: white;
         }
-        
+
         .about-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 4rem;
             align-items: center;
         }
-        
+
         .about-image {
             position: relative;
         }
-        
+
         .about-image img {
             width: 100%;
             max-width: 450px;
             border-radius: 16px;
             box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
         }
-        
+
         .experience-badge {
             position: absolute;
             bottom: -20px;
@@ -445,62 +470,62 @@
             border-radius: 12px;
             text-align: center;
         }
-        
+
         .experience-badge h3 {
             font-size: 2.5rem;
             line-height: 1;
         }
-        
+
         .experience-badge p {
             font-size: 0.875rem;
             opacity: 0.9;
         }
-        
+
         .about-content h3 {
             font-size: 2rem;
             margin-bottom: 1.5rem;
             color: var(--dark);
         }
-        
+
         .about-content p {
             color: var(--gray);
             margin-bottom: 1.5rem;
             line-height: 1.8;
         }
-        
+
         .about-features {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 1rem;
             margin-top: 2rem;
         }
-        
+
         .about-feature {
             display: flex;
             align-items: center;
             gap: 0.75rem;
         }
-        
+
         .about-feature i {
             color: var(--secondary);
         }
-        
+
         .about-feature span {
             font-weight: 500;
             color: var(--dark);
         }
-        
+
         /* Skills Section */
         .skills {
             background: linear-gradient(180deg, #f8fafc 0%, white 100%);
         }
-        
+
         .skills-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 1.5rem;
         }
-        
+
         .skill-card {
             background: white;
             padding: 2rem;
@@ -508,18 +533,18 @@
             border: 1px solid var(--border);
             transition: all 0.3s ease;
         }
-        
+
         .skill-card:hover {
             border-color: var(--primary);
             box-shadow: 0 10px 40px rgba(30, 58, 95, 0.1);
             transform: translateY(-5px);
         }
-        
+
         .skill-card.primary {
             border: 2px solid var(--primary);
             position: relative;
         }
-        
+
         .skill-card.primary::before {
             content: 'PRIMARY';
             position: absolute;
@@ -533,7 +558,7 @@
             font-weight: 700;
             letter-spacing: 1px;
         }
-        
+
         .skill-icon {
             width: 56px;
             height: 56px;
@@ -545,33 +570,33 @@
             color: white;
             margin-bottom: 1.5rem;
         }
-        
+
         .skill-card.secondary .skill-icon {
             background: linear-gradient(135deg, var(--secondary) 0%, var(--accent) 100%);
         }
-        
+
         .skill-card h3 {
             font-size: 1.25rem;
             margin-bottom: 0.5rem;
             color: var(--dark);
         }
-        
+
         .skill-card p {
             color: var(--gray);
             font-size: 0.95rem;
         }
-        
+
         /* Services Section */
         .services {
             background: white;
         }
-        
+
         .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 2rem;
         }
-        
+
         .service-card {
             background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
             color: white;
@@ -580,7 +605,7 @@
             position: relative;
             overflow: hidden;
         }
-        
+
         .service-card::before {
             content: '';
             position: absolute;
@@ -588,23 +613,23 @@
             right: -50%;
             width: 100%;
             height: 100%;
-            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
         }
-        
+
         .service-card.featured {
             grid-column: span 2;
         }
-        
+
         .service-card.secondary {
             background: white;
             color: var(--dark);
             border: 2px solid var(--border);
         }
-        
+
         .service-card.secondary::before {
             display: none;
         }
-        
+
         .service-badge {
             display: inline-block;
             background: rgba(255, 255, 255, 0.2);
@@ -614,58 +639,58 @@
             font-weight: 600;
             margin-bottom: 1rem;
         }
-        
+
         .service-card.secondary .service-badge {
             background: rgba(30, 58, 95, 0.1);
             color: var(--primary);
         }
-        
+
         .service-card h3 {
             font-size: 1.75rem;
             margin-bottom: 1rem;
         }
-        
+
         .service-card p {
             opacity: 0.9;
             margin-bottom: 1.5rem;
         }
-        
+
         .service-card.secondary p {
             color: var(--gray);
         }
-        
+
         .service-features {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 0.75rem;
         }
-        
+
         .service-feature {
             display: flex;
             align-items: center;
             gap: 0.5rem;
             font-size: 0.9rem;
         }
-        
+
         .service-feature i {
             color: #10b981;
         }
-        
+
         .service-card.secondary .service-feature i {
             color: var(--secondary);
         }
-        
+
         /* Portfolio Section */
         .portfolio {
             background: linear-gradient(180deg, white 0%, #f8fafc 100%);
         }
-        
+
         .portfolio-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 2rem;
         }
-        
+
         .portfolio-card {
             background: white;
             border-radius: 16px;
@@ -673,32 +698,32 @@
             border: 1px solid var(--border);
             transition: all 0.3s ease;
         }
-        
+
         .portfolio-card:hover {
             box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
             transform: translateY(-5px);
         }
-        
+
         .portfolio-image {
             height: 220px;
             overflow: hidden;
         }
-        
+
         .portfolio-image img {
             width: 100%;
             height: 100%;
             object-fit: cover;
             transition: transform 0.5s ease;
         }
-        
+
         .portfolio-card:hover .portfolio-image img {
             transform: scale(1.05);
         }
-        
+
         .portfolio-content {
             padding: 1.5rem;
         }
-        
+
         .portfolio-tag {
             display: inline-block;
             background: rgba(30, 58, 95, 0.1);
@@ -709,25 +734,25 @@
             font-weight: 600;
             margin-bottom: 0.75rem;
         }
-        
+
         .portfolio-content h3 {
             font-size: 1.25rem;
             margin-bottom: 0.5rem;
             color: var(--dark);
         }
-        
+
         .portfolio-content p {
             color: var(--gray);
             font-size: 0.95rem;
             margin-bottom: 1rem;
         }
-        
+
         .portfolio-tools {
             display: flex;
             flex-wrap: wrap;
             gap: 0.5rem;
         }
-        
+
         .portfolio-tools span {
             background: #f1f5f9;
             color: var(--gray);
@@ -735,94 +760,94 @@
             border-radius: 4px;
             font-size: 0.75rem;
         }
-        
+
         /* Testimonials Section */
         .testimonials {
             background: white;
         }
-        
+
         .testimonials-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 2rem;
         }
-        
+
         .testimonial-card {
             background: #f8fafc;
             padding: 2rem;
             border-radius: 16px;
             border: 1px solid var(--border);
         }
-        
+
         .testimonial-stars {
             display: flex;
             gap: 0.25rem;
             margin-bottom: 1rem;
         }
-        
+
         .testimonial-stars i {
             color: #fbbf24;
             fill: #fbbf24;
         }
-        
+
         .testimonial-text {
             color: var(--gray);
             margin-bottom: 1.5rem;
             line-height: 1.8;
         }
-        
+
         .testimonial-author {
             display: flex;
             align-items: center;
             gap: 1rem;
         }
-        
+
         .testimonial-author img {
             width: 50px;
             height: 50px;
             border-radius: 50%;
             object-fit: cover;
         }
-        
+
         .testimonial-author h4 {
             font-size: 1rem;
             color: var(--dark);
         }
-        
+
         .testimonial-author p {
             font-size: 0.875rem;
             color: var(--gray);
         }
-        
+
         /* Contact Section */
         .contact {
             background: linear-gradient(135deg, #f0f4f8 0%, #e2e8f0 100%);
         }
-        
+
         .contact-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 4rem;
         }
-        
+
         .contact-info h3 {
             font-size: 2rem;
             margin-bottom: 1rem;
             color: var(--dark);
         }
-        
-        .contact-info > p {
+
+        .contact-info>p {
             color: var(--gray);
             margin-bottom: 2rem;
         }
-        
+
         .contact-item {
             display: flex;
             align-items: center;
             gap: 1rem;
             margin-bottom: 1.5rem;
         }
-        
+
         .contact-item .icon {
             width: 50px;
             height: 50px;
@@ -833,37 +858,37 @@
             justify-content: center;
             color: white;
         }
-        
+
         .contact-item .text p {
             font-size: 0.875rem;
             color: var(--gray);
         }
-        
+
         .contact-item .text a {
             color: var(--dark);
             font-weight: 600;
             text-decoration: none;
         }
-        
+
         .contact-item .text a:hover {
             color: var(--primary);
         }
-        
+
         .contact-social {
             margin-top: 2rem;
         }
-        
+
         .contact-social p {
             font-size: 0.875rem;
             color: var(--gray);
             margin-bottom: 0.75rem;
         }
-        
+
         .social-links {
             display: flex;
             gap: 0.75rem;
         }
-        
+
         .social-links a {
             width: 44px;
             height: 44px;
@@ -876,31 +901,31 @@
             transition: all 0.3s ease;
             border: 1px solid var(--border);
         }
-        
+
         .social-links a:hover {
             background: var(--primary);
             color: white;
             border-color: var(--primary);
         }
-        
+
         .contact-form {
             background: white;
             padding: 2.5rem;
             border-radius: 20px;
             box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
         }
-        
+
         .form-group {
             margin-bottom: 1.5rem;
         }
-        
+
         .form-group label {
             display: block;
             font-weight: 500;
             color: var(--dark);
             margin-bottom: 0.5rem;
         }
-        
+
         .form-group input,
         .form-group textarea {
             width: 100%;
@@ -911,48 +936,48 @@
             font-size: 1rem;
             transition: all 0.3s ease;
         }
-        
+
         .form-group input:focus,
         .form-group textarea:focus {
             outline: none;
             border-color: var(--primary);
         }
-        
+
         .form-group textarea {
             resize: vertical;
             min-height: 120px;
         }
-        
+
         .form-submit {
             width: 100%;
         }
-        
+
         .form-status {
             margin-top: 1rem;
             padding: 1rem;
             border-radius: 8px;
             display: none;
         }
-        
+
         .form-status.success {
             display: block;
             background: #d1fae5;
             color: #065f46;
         }
-        
+
         .form-status.error {
             display: block;
             background: #fee2e2;
             color: #991b1b;
         }
-        
+
         /* Footer */
         .footer {
             background: var(--dark);
             color: white;
             padding: 4rem 2rem 2rem;
         }
-        
+
         .footer-grid {
             max-width: 1280px;
             margin: 0 auto;
@@ -961,25 +986,25 @@
             gap: 3rem;
             margin-bottom: 3rem;
         }
-        
+
         .footer-brand .logo {
             color: white;
             margin-bottom: 1rem;
             display: inline-block;
         }
-        
+
         .footer-brand p {
             color: #94a3b8;
             font-size: 0.95rem;
             line-height: 1.8;
             margin-bottom: 1.5rem;
         }
-        
+
         .footer-social {
             display: flex;
             gap: 0.75rem;
         }
-        
+
         .footer-social a {
             width: 40px;
             height: 40px;
@@ -991,36 +1016,36 @@
             color: white;
             transition: all 0.3s ease;
         }
-        
+
         .footer-social a:hover {
             background: var(--primary);
         }
-        
+
         .footer-links h4 {
             font-size: 1rem;
             margin-bottom: 1.5rem;
             color: white;
         }
-        
+
         .footer-links ul {
             list-style: none;
         }
-        
+
         .footer-links li {
             margin-bottom: 0.75rem;
         }
-        
+
         .footer-links a {
             color: #94a3b8;
             text-decoration: none;
             font-size: 0.95rem;
             transition: color 0.3s ease;
         }
-        
+
         .footer-links a:hover {
             color: white;
         }
-        
+
         .footer-bottom {
             max-width: 1280px;
             margin: 0 auto;
@@ -1030,84 +1055,84 @@
             justify-content: space-between;
             align-items: center;
         }
-        
+
         .footer-bottom p {
             color: #94a3b8;
             font-size: 0.875rem;
         }
-        
+
         /* Responsive */
         @media (max-width: 1024px) {
             .hero-container {
                 grid-template-columns: 1fr;
                 text-align: center;
             }
-            
+
             .hero h1 {
                 font-size: 2.5rem;
             }
-            
+
             .hero-subtitle {
                 margin: 0 auto 2rem;
             }
-            
+
             .hero-buttons {
                 justify-content: center;
             }
-            
+
             .hero-stats {
                 justify-content: center;
             }
-            
+
             .hero-image {
                 order: -1;
             }
-            
+
             .hero-image img {
                 width: 300px;
                 height: 300px;
             }
-            
+
             .about-grid,
             .contact-grid {
                 grid-template-columns: 1fr;
             }
-            
+
             .service-card.featured {
                 grid-column: span 1;
             }
-            
+
             .footer-grid {
                 grid-template-columns: 1fr 1fr;
             }
         }
-        
+
         @media (max-width: 768px) {
             .nav-links {
                 display: none;
             }
-            
+
             .mobile-menu-btn {
                 display: block;
             }
-            
+
             .hero h1 {
                 font-size: 2rem;
             }
-            
+
             .section-title {
                 font-size: 1.75rem;
             }
-            
+
             .services-grid,
             .portfolio-grid {
                 grid-template-columns: 1fr;
             }
-            
+
             .footer-grid {
                 grid-template-columns: 1fr;
             }
-            
+
             .footer-bottom {
                 flex-direction: column;
                 gap: 1rem;
@@ -1115,8 +1140,8 @@
             }
         }
     </style>
-<base target="_blank">
 </head>
+
 <body>
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
@@ -1146,7 +1171,8 @@
                     Available for Projects
                 </div>
                 <h1>Hi, I'm <span class="highlight">Ali Raza</span><br>Data Entry Specialist</h1>
-                <p class="hero-subtitle">Delivering accurate data solutions with 99.9% precision. Helping businesses organize, process, and leverage their data for growth.</p>
+                <p class="hero-subtitle">Delivering accurate data solutions with 99.9% precision. Helping businesses
+                    organize, process, and leverage their data for growth.</p>
                 <div class="hero-buttons">
                     <a href="#contact" class="btn-primary">
                         <i data-lucide="briefcase" style="width: 18px; height: 18px;"></i>
@@ -1173,7 +1199,7 @@
                 </div>
             </div>
             <div class="hero-image">
-                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=600&fit=crop" alt="Ali Raza - Data Entry Specialist">
+                <img src="5.png" alt="Ali Raza - Data Entry Specialist">
                 <div class="floating-card card-1">
                     <div class="icon">
                         <i data-lucide="database" style="width: 20px; height: 20px;"></i>
@@ -1201,7 +1227,7 @@
         <div class="section-container">
             <div class="about-grid">
                 <div class="about-image">
-                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&h=600&fit=crop" alt="About Ali Raza">
+                    <img src="5.png" alt="About Ali Raza">
                     <div class="experience-badge">
                         <h3>5+</h3>
                         <p>Years of<br>Excellence</p>
@@ -1210,8 +1236,12 @@
                 <div class="about-content">
                     <div class="section-label">About Me</div>
                     <h3>Precision in Every Keystroke</h3>
-                    <p>I'm Ali Raza, a dedicated Data Entry Specialist with a passion for delivering accurate digital solutions. With over 5 years of experience, I've helped businesses transform their raw data into organized, actionable information.</p>
-                    <p>My expertise spans data entry, lead generation, email collection, and web research. I believe in precision, reliability, and efficient workflows that drive business growth. Every project receives my full attention to ensure 99.9% accuracy.</p>
+                    <p>I'm Ali Raza, a dedicated Data Entry Specialist with a passion for delivering accurate digital
+                        solutions. With over 5 years of experience, I've helped businesses transform their raw data into
+                        organized, actionable information.</p>
+                    <p>My expertise spans data entry, lead generation, email collection, and web research. I believe in
+                        precision, reliability, and efficient workflows that drive business growth. Every project
+                        receives my full attention to ensure 99.9% accuracy.</p>
                     <div class="about-features">
                         <div class="about-feature">
                             <i data-lucide="check-circle" style="width: 20px; height: 20px;"></i>
@@ -1241,7 +1271,8 @@
             <div class="section-header">
                 <div class="section-label">My Skills</div>
                 <h2 class="section-title">Expertise & Capabilities</h2>
-                <p class="section-subtitle">A comprehensive skill set focused on delivering high-quality data services.</p>
+                <p class="section-subtitle">A comprehensive skill set focused on delivering high-quality data services.
+                </p>
             </div>
             <div class="skills-grid">
                 <div class="skill-card primary">
@@ -1302,7 +1333,8 @@
                 <div class="service-card featured">
                     <span class="service-badge">PRIMARY SERVICE</span>
                     <h3>Data Entry Services</h3>
-                    <p>Professional data entry with unmatched accuracy and speed. From simple data input to complex database management, I handle it all with precision.</p>
+                    <p>Professional data entry with unmatched accuracy and speed. From simple data input to complex
+                        database management, I handle it all with precision.</p>
                     <div class="service-features">
                         <div class="service-feature">
                             <i data-lucide="check" style="width: 16px; height: 16px;"></i>
@@ -1405,12 +1437,13 @@
             <div class="portfolio-grid">
                 <div class="portfolio-card">
                     <div class="portfolio-image">
-                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='220' viewBox='0 0 400 220'%3E%3Crect fill='%23e2e8f0' width='400' height='220'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-size='18' fill='%2364748b'%3ELead Generation Project%3C/text%3E%3C/svg%3E" alt="Lead Generation Project">
+                        <img src="lead-gen.png" alt="B2B Lead Database">
                     </div>
                     <div class="portfolio-content">
                         <span class="portfolio-tag">LEAD GENERATION</span>
                         <h3>B2B Lead Database</h3>
-                        <p>Created a comprehensive database of 5,000+ verified business leads for a marketing agency.</p>
+                        <p>Created a comprehensive database of 5,000+ verified business leads for a marketing agency.
+                        </p>
                         <div class="portfolio-tools">
                             <span>Excel</span>
                             <span>LinkedIn</span>
@@ -1418,23 +1451,26 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="portfolio-card">
                     <div class="portfolio-image">
-                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='220' viewBox='0 0 400 220'%3E%3Crect fill='%23e2e8f0' width='400' height='220'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-size='18' fill='%2364748b'%3EData Processing Dashboard%3C/text%3E%3C/svg%3E" alt="Data Processing Dashboard">
+                        <img src="data-entry.png" alt="Data Processing Dashboard">
                     </div>
                     <div class="portfolio-content">
                         <span class="portfolio-tag">DATA ENTRY</span>
                         <h3>Data Processing Dashboard</h3>
-                        <p>Processed and organized 10,000+ customer records with 99.9% accuracy for an e-commerce company.</p>
+                        <p>Processed and organized 10,000+ customer records with 99.9% accuracy for an e-commerce
+                            company.</p>
                         <div class="portfolio-tools">
                             <span>Google Sheets</span>
                             <span>Data Validation</span>
                         </div>
                     </div>
                 </div>
+
                 <div class="portfolio-card">
                     <div class="portfolio-image">
-                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='220' viewBox='0 0 400 220'%3E%3Crect fill='%23e2e8f0' width='400' height='220'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-size='18' fill='%2364748b'%3EResearch Database%3C/text%3E%3C/svg%3E" alt="Research Database Creation">
+                        <img src="market.png" alt="Research Database Creation">
                     </div>
                     <div class="portfolio-content">
                         <span class="portfolio-tag">WEB RESEARCH</span>
@@ -1448,289 +1484,302 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <!-- Testimonials Section -->
-    <section class="section testimonials" id="testimonials">
-        <div class="section-container">
-            <div class="section-header">
-                <div class="section-label">Testimonials</div>
-                <h2 class="section-title">What Clients Say</h2>
-                <p class="section-subtitle">Feedback from clients who have experienced my work firsthand.</p>
-            </div>
-            <div class="testimonials-grid">
-                <div class="testimonial-card">
-                    <div class="testimonial-stars">
-                        <i data-lucide="star"></i>
-                        <i data-lucide="star"></i>
-                        <i data-lucide="star"></i>
-                        <i data-lucide="star"></i>
-                        <i data-lucide="star"></i>
+            <!-- Testimonials Section -->
+            <section class="section testimonials" id="testimonials">
+                <div class="section-container">
+                    <div class="section-header">
+                        <div class="section-label">Testimonials</div>
+                        <h2 class="section-title">What Clients Say</h2>
+                        <p class="section-subtitle">Feedback from clients who have experienced my work firsthand.</p>
                     </div>
-                    <p class="testimonial-text">"Ali delivered exceptional data entry work with 100% accuracy. His attention to detail and fast turnaround exceeded all expectations. Highly recommended!"</p>
-                    <div class="testimonial-author">
-                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop" alt="Sarah Mitchell">
-                        <div>
-                            <h4>Sarah Mitchell</h4>
-                            <p>Business Owner</p>
+                    <div class="testimonials-grid">
+                        <div class="testimonial-card">
+                            <div class="testimonial-stars">
+                                <i data-lucide="star"></i>
+                                <i data-lucide="star"></i>
+                                <i data-lucide="star"></i>
+                                <i data-lucide="star"></i>
+                                <i data-lucide="star"></i>
+                            </div>
+                            <p class="testimonial-text">"Ali delivered exceptional data entry work with 100% accuracy.
+                                His attention to detail and fast turnaround exceeded all expectations. Highly
+                                recommended!"</p>
+                            <div class="testimonial-author">
+                                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop"
+                                    alt="Sarah Mitchell">
+                                <div>
+                                    <h4>Sarah Mitchell</h4>
+                                    <p>Business Owner</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-card">
+                            <div class="testimonial-stars">
+                                <i data-lucide="star"></i>
+                                <i data-lucide="star"></i>
+                                <i data-lucide="star"></i>
+                                <i data-lucide="star"></i>
+                                <i data-lucide="star"></i>
+                            </div>
+                            <p class="testimonial-text">"Working with Ali was a game-changer. He organized 10,000+
+                                customer records perfectly. Professional, reliable, and always on time!"</p>
+                            <div class="testimonial-author">
+                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop"
+                                    alt="James Anderson">
+                                <div>
+                                    <h4>James Anderson</h4>
+                                    <p>Marketing Manager</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-card">
+                            <div class="testimonial-stars">
+                                <i data-lucide="star"></i>
+                                <i data-lucide="star"></i>
+                                <i data-lucide="star"></i>
+                                <i data-lucide="star"></i>
+                                <i data-lucide="star"></i>
+                            </div>
+                            <p class="testimonial-text">"Ali created a comprehensive lead database for our sales team.
+                                The data quality was outstanding. Will definitely hire again!"</p>
+                            <div class="testimonial-author">
+                                <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop"
+                                    alt="Emily Chen">
+                                <div>
+                                    <h4>Emily Chen</h4>
+                                    <p>Startup Founder</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-stars">
-                        <i data-lucide="star"></i>
-                        <i data-lucide="star"></i>
-                        <i data-lucide="star"></i>
-                        <i data-lucide="star"></i>
-                        <i data-lucide="star"></i>
-                    </div>
-                    <p class="testimonial-text">"Working with Ali was a game-changer. He organized 10,000+ customer records perfectly. Professional, reliable, and always on time!"</p>
-                    <div class="testimonial-author">
-                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop" alt="James Anderson">
-                        <div>
-                            <h4>James Anderson</h4>
-                            <p>Marketing Manager</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-stars">
-                        <i data-lucide="star"></i>
-                        <i data-lucide="star"></i>
-                        <i data-lucide="star"></i>
-                        <i data-lucide="star"></i>
-                        <i data-lucide="star"></i>
-                    </div>
-                    <p class="testimonial-text">"Ali created a comprehensive lead database for our sales team. The data quality was outstanding. Will definitely hire again!"</p>
-                    <div class="testimonial-author">
-                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop" alt="Emily Chen">
-                        <div>
-                            <h4>Emily Chen</h4>
-                            <p>Startup Founder</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+            </section>
 
-    <!-- Contact Section -->
-    <section class="section contact" id="contact">
-        <div class="section-container">
-            <div class="contact-grid">
-                <div class="contact-info">
-                    <div class="section-label">Get In Touch</div>
-                    <h3>Let's Work Together</h3>
-                    <p>Have a data entry project? I'd love to hear about it. Send me a message and let's discuss how I can help.</p>
-                    
-                    <div class="contact-item">
-                        <div class="icon">
-                            <i data-lucide="mail" style="width: 20px; height: 20px;"></i>
+            <!-- Contact Section -->
+            <section class="section contact" id="contact">
+                <div class="section-container">
+                    <div class="contact-grid">
+                        <div class="contact-info">
+                            <div class="section-label">Get In Touch</div>
+                            <h3>Let's Work Together</h3>
+                            <p>Have a data entry project? I'd love to hear about it. Send me a message and let's discuss
+                                how I can help.</p>
+
+                            <div class="contact-item">
+                                <div class="icon">
+                                    <i data-lucide="mail" style="width: 20px; height: 20px;"></i>
+                                </div>
+                                <div class="text">
+                                    <p>Email</p>
+                                    <a href="mailto:itsali327442@gmail.com">Email</a>
+                                </div>
+                            </div>
+
+                            <div class="contact-item">
+                                <div class="icon">
+                                    <i data-lucide="phone" style="width: 20px; height: 20px;"></i>
+                                </div>
+                                <div class="text">
+                                    <p>Phone / WhatsApp</p>
+                                    <a href="tel:+923054496134">Whatsapp</a>
+                                </div>
+                            </div>
+
+                            <div class="contact-item">
+                                <div class="icon">
+                                    <i data-lucide="briefcase" style="width: 20px; height: 20px;"></i>
+                                </div>
+                                <div class="text">
+                                    <p>Fiverr</p>
+                                    <a href="https://www.fiverr.com/razaservices_va" target="_blank">fiverr.com</a>
+                                </div>
+                            </div>
+
+                            <div class="contact-social">
+                                <p>Follow Me</p>
+                                <div class="social-links">
+                                    <a href="https://web.facebook.com/profile.php?id=61583412861151" target="_blank"
+                                        aria-label="Facebook">
+                                        <i data-lucide="facebook" style="width: 20px; height: 20px;"></i>
+                                    </a>
+                                    <a href="https://www.fiverr.com/razaservices_va" target="_blank"
+                                        aria-label="Fiverr">
+                                        <i data-lucide="briefcase" style="width: 20px; height: 20px;"></i>
+                                    </a>
+                                    <a href="mailto:itsali327442@gmail.com" aria-label="Email">
+                                        <i data-lucide="mail" style="width: 20px; height: 20px;"></i>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
-                        <div class="text">
-                            <p>Email</p>
-                            <a href="mailto:itsali327442@gmail.com">itsali327442@gmail.com</a>
+
+                        <div class="contact-form">
+                            <form id="contactForm" onsubmit="sendEmail(event)">
+                                <div class="form-group">
+                                    <label for="name">Your Name</label>
+                                    <input type="text" id="name" name="name" placeholder="John Doe" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email Address</label>
+                                    <input type="email" id="email" name="email" placeholder="john@example.com" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="message">Your Message</label>
+                                    <textarea id="message" name="message" placeholder="Tell me about your project..."
+                                        required></textarea>
+                                </div>
+                                <button type="submit" class="btn-primary form-submit">
+                                    <i data-lucide="send" style="width: 18px; height: 18px;"></i>
+                                    Send Message
+                                </button>
+                                <div id="formStatus" class="form-status"></div>
+                            </form>
                         </div>
                     </div>
-                    
-                    <div class="contact-item">
-                        <div class="icon">
-                            <i data-lucide="phone" style="width: 20px; height: 20px;"></i>
-                        </div>
-                        <div class="text">
-                            <p>Phone / WhatsApp</p>
-                            <a href="tel:+923054496134">+92 305 449 6134</a>
-                        </div>
-                    </div>
-                    
-                    <div class="contact-item">
-                        <div class="icon">
-                            <i data-lucide="briefcase" style="width: 20px; height: 20px;"></i>
-                        </div>
-                        <div class="text">
-                            <p>Fiverr</p>
-                            <a href="https://www.fiverr.com/razaservices_va" target="_blank">fiverr.com/razaservices_va</a>
-                        </div>
-                    </div>
-                    
-                    <div class="contact-social">
-                        <p>Follow Me</p>
-                        <div class="social-links">
-                            <a href="https://web.facebook.com/profile.php?id=61583412861151" target="_blank" aria-label="Facebook">
-                                <i data-lucide="facebook" style="width: 20px; height: 20px;"></i>
+                </div>
+            </section>
+
+            <!-- Footer -->
+            <footer class="footer">
+                <div class="footer-grid">
+                    <div class="footer-brand">
+                        <a href="#" class="logo">Ali<span>.</span>Raza</a>
+                        <p>Professional Data Entry Specialist delivering accurate data solutions with 99.9% precision.
+                            Helping businesses organize and leverage their data for growth.</p>
+                        <div class="footer-social">
+                            <a href="https://web.facebook.com/profile.php?id=61583412861151" target="_blank"
+                                aria-label="Facebook">
+                                <i data-lucide="facebook" style="width: 18px; height: 18px;"></i>
                             </a>
                             <a href="https://www.fiverr.com/razaservices_va" target="_blank" aria-label="Fiverr">
-                                <i data-lucide="briefcase" style="width: 20px; height: 20px;"></i>
+                                <i data-lucide="briefcase" style="width: 18px; height: 18px;"></i>
                             </a>
                             <a href="mailto:itsali327442@gmail.com" aria-label="Email">
-                                <i data-lucide="mail" style="width: 20px; height: 20px;"></i>
+                                <i data-lucide="mail" style="width: 18px; height: 18px;"></i>
                             </a>
                         </div>
                     </div>
+                    <div class="footer-links">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#skills">Skills</a></li>
+                            <li><a href="#services">Services</a></li>
+                            <li><a href="#portfolio">Portfolio</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-links">
+                        <h4>Services</h4>
+                        <ul>
+                            <li><a href="#services">Data Entry</a></li>
+                            <li><a href="#services">Lead Generation</a></li>
+                            <li><a href="#services">Email Collection</a></li>
+                            <li><a href="#services">Web Research</a></li>
+                            <li><a href="#services">CRM Management</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-links">
+                        <h4>Contact</h4>
+                        <ul>
+                            <li><a href="mailto:itsali327442@gmail.com">Email</a></li>
+                            <li><a href="tel:+923054496134">WhatsApp</a></li>
+                            <li><a href="https://www.fiverr.com/razaservices_va" target="_blank">Fiverr Profile</a></li>
+                            <li><a href="https://web.facebook.com/profile.php?id=61583412861151"
+                                    target="_blank">Facebook</a></li>
+                        </ul>
+                    </div>
                 </div>
-                
-                <div class="contact-form">
-                    <form id="contactForm" onsubmit="sendEmail(event)">
-                        <div class="form-group">
-                            <label for="name">Your Name</label>
-                            <input type="text" id="name" name="name" placeholder="John Doe" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email Address</label>
-                            <input type="email" id="email" name="email" placeholder="john@example.com" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Your Message</label>
-                            <textarea id="message" name="message" placeholder="Tell me about your project..." required></textarea>
-                        </div>
-                        <button type="submit" class="btn-primary form-submit">
-                            <i data-lucide="send" style="width: 18px; height: 18px;"></i>
-                            Send Message
-                        </button>
-                        <div id="formStatus" class="form-status"></div>
-                    </form>
+                <div class="footer-bottom">
+                    <p>&copy; 2024 Ali Raza. All rights reserved.</p>
+                    <p>Data Entry Specialist & Virtual Assistant</p>
                 </div>
-            </div>
-        </div>
-    </section>
+            </footer>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-grid">
-            <div class="footer-brand">
-                <a href="#" class="logo">Ali<span>.</span>Raza</a>
-                <p>Professional Data Entry Specialist delivering accurate data solutions with 99.9% precision. Helping businesses organize and leverage their data for growth.</p>
-                <div class="footer-social">
-                    <a href="https://web.facebook.com/profile.php?id=61583412861151" target="_blank" aria-label="Facebook">
-                        <i data-lucide="facebook" style="width: 18px; height: 18px;"></i>
-                    </a>
-                    <a href="https://www.fiverr.com/razaservices_va" target="_blank" aria-label="Fiverr">
-                        <i data-lucide="briefcase" style="width: 18px; height: 18px;"></i>
-                    </a>
-                    <a href="mailto:itsali327442@gmail.com" aria-label="Email">
-                        <i data-lucide="mail" style="width: 18px; height: 18px;"></i>
-                    </a>
-                </div>
-            </div>
-            <div class="footer-links">
-                <h4>Quick Links</h4>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </div>
-            <div class="footer-links">
-                <h4>Services</h4>
-                <ul>
-                    <li><a href="#services">Data Entry</a></li>
-                    <li><a href="#services">Lead Generation</a></li>
-                    <li><a href="#services">Email Collection</a></li>
-                    <li><a href="#services">Web Research</a></li>
-                    <li><a href="#services">CRM Management</a></li>
-                </ul>
-            </div>
-            <div class="footer-links">
-                <h4>Contact</h4>
-                <ul>
-                    <li><a href="mailto:itsali327442@gmail.com">itsali327442@gmail.com</a></li>
-                    <li><a href="tel:+923054496134">+92 305 449 6134</a></li>
-                    <li><a href="https://www.fiverr.com/razaservices_va" target="_blank">Fiverr Profile</a></li>
-                    <li><a href="https://web.facebook.com/profile.php?id=61583412861151" target="_blank">Facebook</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2024 Ali Raza. All rights reserved.</p>
-            <p>Data Entry Specialist & Virtual Assistant</p>
-        </div>
-    </footer>
+            <script>
+                // Initialize Lucide icons
+                lucide.createIcons();
 
-    <script>
-        // Initialize Lucide icons
-        lucide.createIcons();
-        
-        // Initialize EmailJS
-        emailjs.init("BEX7bYtfRPJGoI7o-"); // Replace with your EmailJS public key
-        
-        // Navbar scroll effect
-        window.addEventListener('scroll', () => {
-            const navbar = document.getElementById('navbar');
-            if (window.scrollY > 50) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
-            }
-        });
-        
-        // Mobile menu toggle
-        function toggleMenu() {
-            const navLinks = document.querySelector('.nav-links');
-            navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
-        }
-        
-        // Send email function using EmailJS
-        function sendEmail(e) {
-            e.preventDefault();
-            
-            const form = document.getElementById('contactForm');
-            const formStatus = document.getElementById('formStatus');
-            const submitBtn = form.querySelector('button[type="submit"]');
-            const originalText = submitBtn.innerHTML;
-            
-            // Show loading state
-            submitBtn.innerHTML = '<i data-lucide="loader-2" style="width: 18px; height: 18px;" class="spin"></i> Sending...';
-            submitBtn.disabled = true;
-            lucide.createIcons();
-            
-            const templateParams = {
-                from_name: document.getElementById('name').value,
-                from_email: document.getElementById('email').value,
-                message: document.getElementById('message').value,
-                to_email: 'itsali327442@gmail.com'
-            };
-            
-            // Send email using EmailJS
-            emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', templateParams)
-                .then(() => {
-                    formStatus.className = 'form-status success';
-                    formStatus.textContent = 'Message sent successfully! I\'ll get back to you soon.';
-                    form.reset();
-                })
-                .catch((error) => {
-                    console.error('EmailJS Error:', error);
-                    // Fallback to mailto
-                    const subject = encodeURIComponent('Project Inquiry from ' + templateParams.from_name);
-                    const body = encodeURIComponent('Name: ' + templateParams.from_name + '\nEmail: ' + templateParams.from_email + '\n\nMessage:\n' + templateParams.message);
-                    window.open('https://mail.google.com/mail/?view=cm&fs=1&to=itsali327442@gmail.com&su=' + subject + '&body=' + body, '_blank');
-                    formStatus.className = 'form-status success';
-                    formStatus.textContent = 'Opening Gmail for you to send the message!';
-                    form.reset();
-                })
-                .finally(() => {
-                    submitBtn.innerHTML = originalText;
-                    submitBtn.disabled = false;
-                    lucide.createIcons();
+                // Initialize EmailJS
+                emailjs.init("BEX7bYtfRPJGoI7o-"); // Replace with your EmailJS public key
+
+                // Navbar scroll effect
+                window.addEventListener('scroll', () => {
+                    const navbar = document.getElementById('navbar');
+                    if (window.scrollY > 50) {
+                        navbar.classList.add('scrolled');
+                    } else {
+                        navbar.classList.remove('scrolled');
+                    }
                 });
-        }
-        
-        // Smooth scroll for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
+
+                // Mobile menu toggle
+                function toggleMenu() {
+                    const navLinks = document.querySelector('.nav-links');
+                    navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
                 }
-            });
-        });
-    </script>
+
+                // Send email function using EmailJS
+                function sendEmail(e) {
+                    e.preventDefault();
+
+                    const form = document.getElementById('contactForm');
+                    const formStatus = document.getElementById('formStatus');
+                    const submitBtn = form.querySelector('button[type="submit"]');
+                    const originalText = submitBtn.innerHTML;
+
+                    // Show loading state
+                    submitBtn.innerHTML = '<i data-lucide="loader-2" style="width: 18px; height: 18px;" class="spin"></i> Sending...';
+                    submitBtn.disabled = true;
+                    lucide.createIcons();
+
+                    const templateParams = {
+                        from_name: document.getElementById('name').value,
+                        from_email: document.getElementById('email').value,
+                        message: document.getElementById('message').value,
+                        to_email: 'itsali327442@gmail.com'
+                    };
+
+                    // Send email using EmailJS
+                    emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', templateParams)
+                        .then(() => {
+                            formStatus.className = 'form-status success';
+                            formStatus.textContent = 'Message sent successfully! I\'ll get back to you soon.';
+                            form.reset();
+                        })
+                        .catch((error) => {
+                            console.error('EmailJS Error:', error);
+                            // Fallback to mailto
+                            const subject = encodeURIComponent('Project Inquiry from ' + templateParams.from_name);
+                            const body = encodeURIComponent('Name: ' + templateParams.from_name + '\nEmail: ' + templateParams.from_email + '\n\nMessage:\n' + templateParams.message);
+                            window.open('https://mail.google.com/mail/?view=cm&fs=1&to=itsali327442@gmail.com&su=' + subject + '&body=' + body, '_blank');
+                            formStatus.className = 'form-status success';
+                            formStatus.textContent = 'Opening Gmail for you to send the message!';
+                            form.reset();
+                        })
+                        .finally(() => {
+                            submitBtn.innerHTML = originalText;
+                            submitBtn.disabled = false;
+                            lucide.createIcons();
+                        });
+                }
+
+                // Smooth scroll for navigation links
+                document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                    anchor.addEventListener('click', function (e) {
+                        e.preventDefault();
+                        const target = document.querySelector(this.getAttribute('href'));
+                        if (target) {
+                            target.scrollIntoView({
+                                behavior: 'smooth',
+                                block: 'start'
+                            });
+                        }
+                    });
+                });
+            </script>
 </body>
+
 </html>
