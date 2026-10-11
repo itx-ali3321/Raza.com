@@ -4887,21 +4887,24 @@
                     }
                 });
 
-                email.addEventListener("click", event => {
+
+                email.addEventListener("click", function (event) {
                     event.preventDefault();
-                    updateLinks();
 
-                    const gmailUrl = email.href;
-                    const tab = window.open(
-                        gmailUrl,
-                        "_blank",
-                        "noopener,noreferrer"
-                    );
+                    const recipient = "itsali327442@gmail.com";
+                    const subject = "Website Project Inquiry";
+                    const message = input.value.trim() ||
+                        "Hi Ali, I visited your portfolio and would like to discuss a website project.";
 
-                    if (!tab) {
-                        window.location.href = gmailUrl;
-                    }
+                    const gmailUrl =
+                        "https://mail.google.com/mail/u/0/?view=cm&fs=1" +
+                        "&to=" + encodeURIComponent(recipient) +
+                        "&su=" + encodeURIComponent(subject) +
+                        "&body=" + encodeURIComponent(message);
+
+                    window.open(gmailUrl, "_blank");
                 });
+
 
                 panel.hidden = true;
                 toggle.hidden = false;
