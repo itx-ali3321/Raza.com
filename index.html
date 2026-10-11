@@ -4551,6 +4551,379 @@
         <i data-lucide="arrow-up" style="width:20px;height:20px;position:relative;z-index:1"></i>
     </button>
 
+
+    <!-- ===== ALI RAZA CHAT WIDGET ===== -->
+
+    <div id="contact-chat" hidden>
+        <div class="chat-header">
+            <div class="chat-avatar">
+                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" role="img"
+                    aria-label="Cartoon support agent">
+                    <rect width="100" height="100" fill="#fff0dc" />
+                    <path d="M13 100 Q15 65 50 65 Q85 65 87 100" fill="#2874a6" />
+                    <path d="M29 42 Q19 12 49 11 Q79 12 73 44 L69 61 L30 61Z" fill="#513522" />
+                    <ellipse cx="50" cy="43" rx="21" ry="26" fill="#edbb91" />
+                    <path d="M29 38 Q25 14 48 12 Q73 11 73 36 L64 28 Q48 34 33 27Z" fill="#513522" />
+                    <path d="M36 40 L44 40 M56 40 L64 40" stroke="#513522" stroke-width="3" stroke-linecap="round" />
+                    <circle cx="40" cy="43" r="2.5" fill="#30241c" />
+                    <circle cx="60" cy="43" r="2.5" fill="#30241c" />
+                    <path d="M43 55 Q50 62 57 55" fill="none" stroke="#a65f48" stroke-width="2.5"
+                        stroke-linecap="round" />
+                    <path d="M39 66 L50 78 L61 66 L67 100 L33 100Z" fill="#fff" />
+                    <path d="M13 100 Q18 78 36 73 L50 84 L64 73 Q82 78 87 100" fill="#2874a6" />
+                </svg>
+                <span class="avatar-status"></span>
+            </div>
+
+            <div class="chat-heading">
+                <strong>Ali Raza | Web Developer</strong>
+                <small>Available for projects</small>
+                <small class="online">● Online</small>
+            </div>
+
+            <button id="chat-close" type="button" aria-label="Close chat">×</button>
+        </div>
+
+        <div class="chat-message">
+            Hi 👋, thanks for visiting my portfolio!
+            Can I help you with a website project?
+        </div>
+
+        <form id="chat-form">
+            <input id="chat-input" type="text" placeholder="Type your message..." aria-label="Your message"
+                autocomplete="off" required>
+            <button type="submit" aria-label="Send message">
+                <svg viewBox="0 0 24 24" width="23" height="23" fill="currentColor">
+                    <path d="M2 21 23 12 2 3l2 7 13 2-13 2z" />
+                </svg>
+            </button>
+        </form>
+
+        <div class="chat-actions">
+            <a id="chat-email" href="#" target="_blank" rel="noopener noreferrer">✉ Email</a>
+            <a id="chat-whatsapp" href="#" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+        </div>
+    </div>
+
+    <button id="chat-toggle" type="button" aria-label="Open contact chat">
+        <span class="launcher-icon">☏</span>
+        Chat with me
+    </button>
+
+    <style>
+        #contact-chat {
+            position: fixed;
+            right: 18px;
+            bottom: 82px;
+            width: min(320px, calc(100vw - 28px));
+            box-sizing: border-box;
+            background: #f1f1f1;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 35px rgba(0, 0, 0, .22);
+            z-index: 999999;
+            font: 14px Arial, Helvetica, sans-serif;
+            color: #222;
+        }
+
+        #contact-chat[hidden],
+        #chat-toggle[hidden] {
+            display: none !important;
+        }
+
+        #contact-chat .chat-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px;
+            background: #18bd59;
+            color: #fff;
+        }
+
+        #contact-chat .chat-avatar {
+            position: relative;
+            width: 46px;
+            height: 46px;
+            flex: 0 0 46px;
+            border: 2px solid white;
+            border-radius: 50%;
+            overflow: hidden;
+            background: white;
+            box-sizing: border-box;
+        }
+
+        #contact-chat .chat-avatar svg {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+
+        #contact-chat .avatar-status {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            width: 10px;
+            height: 10px;
+            border: 1.5px solid white;
+            border-radius: 50%;
+            background: #22c55e;
+        }
+
+        #contact-chat .chat-heading {
+            flex: 1;
+            min-width: 0;
+        }
+
+        #contact-chat .chat-heading strong,
+        #contact-chat .chat-heading small {
+            display: block;
+            line-height: 1.4;
+        }
+
+        #contact-chat .chat-heading strong {
+            font-size: 13px;
+        }
+
+        #contact-chat .chat-heading small {
+            margin-top: 3px;
+            font-size: 12px;
+        }
+
+        #contact-chat .chat-heading .online {
+            color: #e1ffe9;
+        }
+
+        #contact-chat #chat-close {
+            padding: 0 2px;
+            border: none;
+            background: transparent;
+            color: white;
+            font-size: 27px;
+            line-height: 1;
+            cursor: pointer;
+        }
+
+        #contact-chat .chat-message {
+            margin: 14px 10px 22px;
+            padding: 12px;
+            border-radius: 12px;
+            background: #dcf8c6;
+            line-height: 1.55;
+            overflow-wrap: anywhere;
+        }
+
+        #contact-chat #chat-form {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            margin: 10px;
+            padding: 5px 8px 5px 12px;
+            border-radius: 28px;
+            background: white;
+        }
+
+        #contact-chat #chat-input {
+            flex: 1;
+            width: 100%;
+            min-width: 0;
+            padding: 9px 2px;
+            border: none;
+            outline: none;
+            box-shadow: none;
+            background: transparent;
+            color: #222;
+            font: inherit;
+        }
+
+        #contact-chat #chat-form button {
+            display: grid;
+            place-items: center;
+            flex: 0 0 28px;
+            width: 28px;
+            height: 32px;
+            padding: 0;
+            border: none;
+            background: transparent;
+            color: #18ad52;
+            cursor: pointer;
+        }
+
+        #contact-chat .chat-actions {
+            display: flex;
+            gap: 8px;
+            padding: 0 10px 10px;
+        }
+
+        #contact-chat .chat-actions a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex: 1;
+            min-width: 0;
+            padding: 13px 5px;
+            border-radius: 26px;
+            background: white;
+            color: #555;
+            text-align: center;
+            text-decoration: none;
+            font: 14px Arial, sans-serif;
+            transition: background .2s;
+        }
+
+        #contact-chat .chat-actions a:hover {
+            background: #e6f7eb;
+        }
+
+        #chat-toggle {
+            position: fixed;
+            right: 18px;
+            bottom: 18px;
+            z-index: 999998;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 14px 20px;
+            border: none;
+            border-radius: 28px;
+            background: #18bd59;
+            color: white;
+            font: 700 14px Arial, sans-serif;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, .18);
+            cursor: pointer;
+        }
+
+        #chat-toggle .launcher-icon {
+            font-size: 19px;
+        }
+
+        @media (max-width: 400px) {
+            #contact-chat {
+                right: 10px;
+                bottom: 76px;
+                width: calc(100vw - 20px);
+            }
+
+            #chat-toggle {
+                right: 12px;
+                bottom: 12px;
+            }
+        }
+    </style>
+
+    <script>
+        (() => {
+            function initContactChat() {
+                const panel = document.getElementById("contact-chat");
+                const toggle = document.getElementById("chat-toggle");
+                const close = document.getElementById("chat-close");
+                const form = document.getElementById("chat-form");
+                const input = document.getElementById("chat-input");
+                const whatsapp = document.getElementById("chat-whatsapp");
+                const email = document.getElementById("chat-email");
+
+                if (!panel || !toggle || !close || !form ||
+                    !input || !whatsapp || !email) {
+                    console.error("Chat widget elements are missing.");
+                    return;
+                }
+
+                // WhatsApp number: country code + number, without +.
+                const phone = "923054496134";
+
+                // Email address
+                const emailAddress = "itsali327442@gmail.com";
+
+                function getMessage() {
+                    return input.value.trim() ||
+                        "Hi Ali, I visited your portfolio and would like to discuss a website project.";
+                }
+
+                function updateLinks() {
+                    const message = getMessage();
+
+                    whatsapp.href =
+                        "https://wa.me/" + phone +
+                        "?text=" + encodeURIComponent(message);
+
+                    email.href =
+                        "https://mail.google.com/mail/?view=cm&fs=1" +
+                        "&to=" + encodeURIComponent(emailAddress) +
+                        "&su=" + encodeURIComponent("Website Project Inquiry") +
+                        "&body=" + encodeURIComponent(message);
+                }
+
+                toggle.addEventListener("click", () => {
+                    panel.hidden = false;
+                    toggle.hidden = true;
+                    updateLinks();
+                });
+
+                close.addEventListener("click", () => {
+                    panel.hidden = true;
+                    toggle.hidden = false;
+                });
+
+                input.addEventListener("input", updateLinks);
+
+                form.addEventListener("submit", event => {
+                    event.preventDefault();
+
+                    if (!input.value.trim()) {
+                        input.focus();
+                        return;
+                    }
+
+                    updateLinks();
+
+                    const tab = window.open(
+                        whatsapp.href,
+                        "_blank",
+                        "noopener,noreferrer"
+                    );
+
+                    if (!tab) {
+                        window.location.href = whatsapp.href;
+                    }
+                });
+
+                email.addEventListener("click", event => {
+                    event.preventDefault();
+                    updateLinks();
+
+                    const gmailUrl = email.href;
+                    const tab = window.open(
+                        gmailUrl,
+                        "_blank",
+                        "noopener,noreferrer"
+                    );
+
+                    if (!tab) {
+                        window.location.href = gmailUrl;
+                    }
+                });
+
+                panel.hidden = true;
+                toggle.hidden = false;
+                updateLinks();
+            }
+
+            if (document.readyState === "loading") {
+                document.addEventListener(
+                    "DOMContentLoaded",
+                    initContactChat,
+                    { once: true }
+                );
+            } else {
+                initContactChat();
+            }
+        })();
+    </script>
+
+    <!-- ===== END CHAT WIDGET ===== -->
+
+
+
     <script>
         // Initialize Lucide icons
         lucide.createIcons();
@@ -4644,7 +5017,7 @@
 
         function animateParticles() {
             ctx.clearRect(0, 0, canvas.width, canvas.height);
-            particles.forEach(p => {p.update(); p.draw();});
+            particles.forEach(p => { p.update(); p.draw(); });
             for (let i = 0; i < particles.length; i++) {
                 for (let j = i + 1; j < particles.length; j++) {
                     const dx = particles[i].x - particles[j].x;
@@ -4678,8 +5051,8 @@
                 charIndex++;
             }
             let typeSpeed = isDeleting ? 50 : 100;
-            if (!isDeleting && charIndex === current.length) {typeSpeed = 2000; isDeleting = true;}
-            else if (isDeleting && charIndex === 0) {isDeleting = false; textIndex = (textIndex + 1) % texts.length; typeSpeed = 500;}
+            if (!isDeleting && charIndex === current.length) { typeSpeed = 2000; isDeleting = true; }
+            else if (isDeleting && charIndex === 0) { isDeleting = false; textIndex = (textIndex + 1) % texts.length; typeSpeed = 500; }
             setTimeout(type, typeSpeed);
         }
         setTimeout(type, 1000);
@@ -4734,7 +5107,7 @@
         });
 
         // Intersection Observer for Animations
-        const observerOptions = {threshold: 0.1, rootMargin: '0px 0px -50px 0px'};
+        const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -4757,13 +5130,13 @@
                     const increment = target / 50;
                     const timer = setInterval(() => {
                         current += increment;
-                        if (current >= target) {entry.target.textContent = target + '+'; clearInterval(timer);}
+                        if (current >= target) { entry.target.textContent = target + '+'; clearInterval(timer); }
                         else entry.target.textContent = Math.floor(current);
                     }, 30);
                     counterObserver.unobserve(entry.target);
                 }
             });
-        }, {threshold: 0.5});
+        }, { threshold: 0.5 });
         document.querySelectorAll('[data-count]').forEach(el => counterObserver.observe(el));
 
         // Testimonials Carousel (only runs when the testimonials section is enabled)
@@ -4784,20 +5157,20 @@
                 track.style.transform = `translateX(-${currentTestimonial * 100}%)`;
                 dotsContainer.querySelectorAll('.testimonial-dot').forEach((dot, i) => dot.classList.toggle('active', i === currentTestimonial));
             }
-            window.nextTestimonial = function () {currentTestimonial = (currentTestimonial + 1) % cards.length; updateCarousel();};
-            window.prevTestimonial = function () {currentTestimonial = (currentTestimonial - 1 + cards.length) % cards.length; updateCarousel();};
-            window.goToTestimonial = function (index) {currentTestimonial = index; updateCarousel();};
+            window.nextTestimonial = function () { currentTestimonial = (currentTestimonial + 1) % cards.length; updateCarousel(); };
+            window.prevTestimonial = function () { currentTestimonial = (currentTestimonial - 1 + cards.length) % cards.length; updateCarousel(); };
+            window.goToTestimonial = function (index) { currentTestimonial = index; updateCarousel(); };
             setInterval(window.nextTestimonial, 6000);
         }
 
         // Proof of Work Lightbox
         const proofData = {
-            excel: {type: 'Excel', title: 'Excel Data Entry', desc: 'Structured entry of business records into formatted Excel workbooks with validation rules, consistent formatting, and clean column structure.', tools: ['Excel', 'Data Validation', 'Formatting']},
-            sheets: {type: 'Google Sheets', title: 'Google Sheets Management', desc: 'Collaborative trackers with clean formatting, filters, conditional highlighting, and shared team access for real-time updates.', tools: ['Google Sheets', 'Formatting', 'Filters']},
-            leads: {type: 'Lead Gen', title: 'Lead Generation Lists', desc: 'Targeted prospect lists with company, contact name, role, and verified email columns — researched and deduplicated.', tools: ['LinkedIn', 'Google Search', 'Google Sheets']},
-            research: {type: 'Research', title: 'Web Research Summaries', desc: 'Organized research tables with sources, key findings, and comparison columns — everything referenced and easy to scan.', tools: ['Google Search', 'Excel', 'Source Verification']},
-            cleaning: {type: 'Cleaning', title: 'Data Cleaning', desc: 'Deduplication, format standardization, and error fixing for messy datasets — turned into clean, reliable records.', tools: ['Excel', 'Google Sheets', 'Deduplication']},
-            crm: {type: 'CRM', title: 'CRM Data Management', desc: 'Clean imports, updated records, and consistent fields across your CRM so your pipeline data stays trustworthy.', tools: ['HubSpot', 'Zoho', 'Salesforce']}
+            excel: { type: 'Excel', title: 'Excel Data Entry', desc: 'Structured entry of business records into formatted Excel workbooks with validation rules, consistent formatting, and clean column structure.', tools: ['Excel', 'Data Validation', 'Formatting'] },
+            sheets: { type: 'Google Sheets', title: 'Google Sheets Management', desc: 'Collaborative trackers with clean formatting, filters, conditional highlighting, and shared team access for real-time updates.', tools: ['Google Sheets', 'Formatting', 'Filters'] },
+            leads: { type: 'Lead Gen', title: 'Lead Generation Lists', desc: 'Targeted prospect lists with company, contact name, role, and verified email columns — researched and deduplicated.', tools: ['LinkedIn', 'Google Search', 'Google Sheets'] },
+            research: { type: 'Research', title: 'Web Research Summaries', desc: 'Organized research tables with sources, key findings, and comparison columns — everything referenced and easy to scan.', tools: ['Google Search', 'Excel', 'Source Verification'] },
+            cleaning: { type: 'Cleaning', title: 'Data Cleaning', desc: 'Deduplication, format standardization, and error fixing for messy datasets — turned into clean, reliable records.', tools: ['Excel', 'Google Sheets', 'Deduplication'] },
+            crm: { type: 'CRM', title: 'CRM Data Management', desc: 'Clean imports, updated records, and consistent fields across your CRM so your pipeline data stays trustworthy.', tools: ['HubSpot', 'Zoho', 'Salesforce'] }
         };
         const lightbox = document.getElementById('lightbox');
         const lightboxShot = document.getElementById('lightboxShot');
@@ -4825,7 +5198,7 @@
             if (lastFocusedProof) lastFocusedProof.focus();
         }
         document.getElementById('lightboxClose').addEventListener('click', closeLightbox);
-        lightbox.addEventListener('click', (e) => {if (e.target === lightbox) closeLightbox();});
+        lightbox.addEventListener('click', (e) => { if (e.target === lightbox) closeLightbox(); });
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape') {
                 if (lightbox.classList.contains('open')) closeLightbox();
@@ -4881,11 +5254,11 @@
             // Validation
             let valid = true;
             form.querySelectorAll('.form-group').forEach(g => g.classList.remove('error'));
-            if (!name.trim()) {form.querySelector('#name').parentElement.classList.add('error'); valid = false;}
-            if (!email.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/)) {form.querySelector('#email').parentElement.classList.add('error'); valid = false;}
-            if (!service) {form.querySelector('#service').parentElement.classList.add('error'); valid = false;}
-            if (!message.trim()) {form.querySelector('#message').parentElement.classList.add('error'); valid = false;}
-            if (!valid) {showToast('Please fill in all required fields correctly.', 'error'); return;}
+            if (!name.trim()) { form.querySelector('#name').parentElement.classList.add('error'); valid = false; }
+            if (!email.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/)) { form.querySelector('#email').parentElement.classList.add('error'); valid = false; }
+            if (!service) { form.querySelector('#service').parentElement.classList.add('error'); valid = false; }
+            if (!message.trim()) { form.querySelector('#message').parentElement.classList.add('error'); valid = false; }
+            if (!valid) { showToast('Please fill in all required fields correctly.', 'error'); return; }
 
             btn.disabled = true;
             text.textContent = 'Sending...';
@@ -4917,7 +5290,7 @@
         });
 
         function scrollToTop() {
-            window.scrollTo({top: 0, behavior: 'smooth'});
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
         // Smooth Scroll for Anchor Links
@@ -4925,7 +5298,7 @@
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
                 const target = document.querySelector(this.getAttribute('href'));
-                if (target) target.scrollIntoView({behavior: 'smooth', block: 'start'});
+                if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
             });
         });
 
@@ -4933,4 +5306,5 @@
         setTimeout(() => lucide.createIcons(), 100);
     </script>
 </body>
+
 </html>
