@@ -18,8 +18,8 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@500;600;700;800&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="portfolio-pages.css">
-    <script src="portfolio-pages.js" defer></script>
+    <link rel="stylesheet" href="portfolio-pages.css?v=4">
+    <script src="portfolio-pages.js?v=4" defer></script>
     <style>
         /* ===== Footer: variables ===== */
         :root {
@@ -206,80 +206,6 @@
             if (window.lucide) lucide.createIcons();
         });
     </script>
-    <!-- Mobile menu markup (skip if the page already has #mobileMenu) -->
-    <div class="mobile-menu-overlay" id="mobileOverlay"></div>
-    <div class="mobile-menu" id="mobileMenu" aria-label="Mobile navigation">
-        <button class="mobile-close" id="mobileClose" aria-label="Close menu"><i data-lucide="x"
-                style="width:24px;height:24px"></i></button>
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="data-entry.html">Data Entry</a></li>
-            <li><a href="web-development.html">Web Development</a></li>
-            <li><a href="portfolio.html">Portfolio</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </div>
-
-    <script>
-        (function () {
-            var html = document.documentElement;
-
-            function icons() { if (window.lucide) lucide.createIcons(); }
-
-            function setThemeIcon(theme) {
-                var btn = document.getElementById('themeToggle');
-                if (!btn) return;
-                // Rebuild the icon each time, because lucide replaces the <i> with an <svg>
-                btn.innerHTML = '<i data-lucide="' + (theme === 'dark' ? 'sun' : 'moon') +
-                    '" id="themeIcon" style="width:18px;height:18px"></i>';
-                icons();
-            }
-
-            window.toggleTheme = function () {
-                var next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-                html.setAttribute('data-theme', next);
-                try { localStorage.setItem('theme', next); } catch (e) { }
-                setThemeIcon(next);
-            };
-
-            window.openMenu = function () {
-                var m = document.getElementById('mobileMenu');
-                var o = document.getElementById('mobileOverlay');
-                var b = document.getElementById('mobileMenuBtn');
-                if (m) m.classList.add('open');
-                if (o) o.classList.add('open');
-                if (b) b.setAttribute('aria-expanded', 'true');
-                document.body.style.overflow = 'hidden';
-            };
-
-            window.closeMenu = function () {
-                var m = document.getElementById('mobileMenu');
-                var o = document.getElementById('mobileOverlay');
-                var b = document.getElementById('mobileMenuBtn');
-                if (m) m.classList.remove('open');
-                if (o) o.classList.remove('open');
-                if (b) b.setAttribute('aria-expanded', 'false');
-                document.body.style.overflow = '';
-            };
-
-            // Close on overlay click, close button, any menu link, or Escape
-            var overlay = document.getElementById('mobileOverlay');
-            var closeBtn = document.getElementById('mobileClose');
-            if (overlay) overlay.addEventListener('click', closeMenu);
-            if (closeBtn) closeBtn.addEventListener('click', closeMenu);
-            document.querySelectorAll('#mobileMenu a').forEach(function (a) {
-                a.addEventListener('click', closeMenu);
-            });
-            document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeMenu(); });
-
-            // Restore saved theme on load
-            var saved = 'light';
-            try { saved = localStorage.getItem('theme') || 'light'; } catch (e) { }
-            html.setAttribute('data-theme', saved);
-            window.addEventListener('load', function () { setThemeIcon(saved); });
-        })();
-    </script>
 </head>
 
 <body class="portfolio-page">
@@ -288,7 +214,7 @@
             <div class="nav-container">
                 <a href="index.html" class="logo">Ali<span>.</span>Raza</a>
                 <ul class="nav-links">
-                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="data-entry.html">Data Entry</a></li>
                     <li><a href="web-development.html">Web Development</a></li>
@@ -408,7 +334,7 @@
     <footer class="footer">
         <div class="footer-grid">
             <div class="footer-brand">
-                <a href="#" class="logo">Ali<span>.</span>Raza</a>
+                <a href="index.html" class="logo">Ali<span>.</span>Raza</a>
                 <p>Data entry, research, CRM support, and website development for businesses and freelancers.</p>
                 <div class="footer-social">
                     <a href="https://web.facebook.com/profile.php?id=61583412861151" target="_blank"
@@ -443,10 +369,10 @@
             <div class="footer-links">
                 <h4>Services</h4>
                 <ul>
-                    <li><a href="#services">Data Entry</a></li>
-                    <li><a href="#services">Lead Generation</a></li>
-                    <li><a href="#services">Email Collection</a></li>
-                    <li><a href="#services">Web Research</a></li>
+                    <li><a href="index.html#services">Data Entry</a></li>
+                    <li><a href="index.html#services">Lead Generation</a></li>
+                    <li><a href="index.html#services">Email Collection</a></li>
+                    <li><a href="index.html#services">Web Research</a></li>
                     <li><a href="data-entry.html">CRM Management</a></li>
                     <li><a href="web-development.html">Web Development</a></li>
                 </ul>
