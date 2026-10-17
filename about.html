@@ -1,0 +1,378 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>About Ali Raza | Data Entry & Web Development</title>
+    <meta name="description"
+        content="Learn about Ali Raza's work across data entry, research, CRM support, and website development.">
+    <link rel="canonical" href="https://aliiraza.netlify.app/about.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231e3a5f'/%3E%3Ctext x='32' y='42' font-family='Arial,sans-serif' font-size='28' font-weight='700' fill='%23d4af37' text-anchor='middle'%3EAR%3C/text%3E%3C/svg%3E">
+    <script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"Person","name":"Ali Raza","jobTitle":"Data Entry Specialist and Web Developer","description":"Freelance data entry, research, CRM support, and website development services.","email":"itsali327442@gmail.com","telephone":"+923054496134","address":{"@type":"PostalAddress","addressCountry":"PK"},"sameAs":["https://www.fiverr.com/razaservices_va","https://web.facebook.com/profile.php?id=61583412861151"]}
+    </script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="portfolio-pages.css">
+    <script src="portfolio-pages.js" defer></script>
+    <style>
+        /* ===== Footer: variables ===== */
+        :root {
+            --primary: #1e3a5f;
+            --secondary: #0f766e;
+            --gold: #d4af37;
+            --dark: #0f172a;
+            --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        [data-theme="dark"] {
+            --primary: #60a5fa;
+            --secondary: #2dd4bf;
+            --gold: #fbbf24;
+        }
+
+        /* ===== Footer: logo ===== */
+        .logo {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
+            position: relative;
+            overflow: hidden
+        }
+
+        .logo span {
+            color: var(--gold)
+        }
+
+        /* ===== Footer ===== */
+        .footer {
+            background: #0f172a;
+            color: white;
+            padding: 4rem 2rem 2rem;
+            position: relative;
+            overflow: hidden
+        }
+
+        .footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary), var(--gold), var(--secondary))
+        }
+
+        .footer-grid {
+            max-width: 1280px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 3rem
+        }
+
+        .footer-brand .logo {
+            color: white;
+            margin-bottom: 1rem;
+            display: inline-block
+        }
+
+        .footer-brand p {
+            color: #94a3b8;
+            font-size: 0.95rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 0.75rem
+        }
+
+        .footer-social a {
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            transition: var(--transition);
+            text-decoration: none
+        }
+
+        .footer-social a:hover {
+            background: var(--primary);
+            transform: translateY(-3px)
+        }
+
+        .footer-links h4 {
+            font-size: 1rem;
+            margin-bottom: 1.5rem;
+            color: white
+        }
+
+        .footer-links ul {
+            list-style: none
+        }
+
+        .footer-links li {
+            margin-bottom: 0.75rem
+        }
+
+        .footer-links a {
+            color: #94a3b8;
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: var(--transition);
+            position: relative
+        }
+
+        .footer-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background: var(--gold);
+            transition: width 0.3s ease
+        }
+
+        .footer-links a:hover {
+            color: white
+        }
+
+        .footer-links a:hover::after {
+            width: 100%
+        }
+
+        .footer-bottom {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center
+        }
+
+        .footer-bottom p {
+            color: #94a3b8;
+            font-size: 0.875rem
+        }
+
+        /* ===== Footer: responsive ===== */
+        @media (max-width:1024px) {
+            .footer-grid {
+                grid-template-columns: 1fr 1fr
+            }
+        }
+
+        @media (max-width:768px) {
+            .footer {
+                padding: 3rem 1.25rem 1.5rem
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                gap: 1rem;
+                text-align: center
+            }
+        }
+
+        /* Touch devices: disable hover transform */
+        @media (hover:none) and (pointer:coarse) {
+            .footer-social a:hover {
+                transform: none
+            }
+        }
+    </style>
+    <script>
+        window.addEventListener('load', function () {
+            if (window.lucide) lucide.createIcons();
+        });
+    </script>
+</head>
+
+<body class="portfolio-page">
+    <header class="site-header">
+        <nav class="navbar" id="navbar">
+            <div class="nav-container">
+                <a href="index.html" class="logo">Ali<span>.</span>Raza</a>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="data-entry.html">Data Entry</a></li>
+                    <li><a href="web-development.html">Web Development</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div style="display:flex;align-items:center;gap:1rem">
+                    <button class="theme-toggle" id="themeToggle" onclick="toggleTheme()"
+                        aria-label="Toggle dark mode"><i data-lucide="moon" id="themeIcon"
+                            style="width:18px;height:18px"></i></button>
+                    <a href="contact.html" class="nav-cta">Hire Me</a>
+                    <button class="mobile-menu-btn" id="mobileMenuBtn" onclick="openMenu()" aria-label="Open menu"
+                        aria-expanded="false" aria-controls="mobileMenu"><i data-lucide="menu"
+                            style="width:24px;height:24px"></i></button>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="page-hero">
+            <div class="page-wrap page-hero-inner">
+                <span class="page-eyebrow">About</span>
+                <h1>Reliable digital support, <span>built around your work.</span></h1>
+                <p class="page-lead">I'm Ali Raza. I work across two practical areas: organizing business information
+                    and building websites for businesses and freelancers.</p>
+                <div class="page-actions">
+                    <a class="page-button" href="contact.html">Start a conversation</a>
+                    <a class="page-button secondary" href="portfolio.html">See selected work</a>
+                </div>
+            </div>
+        </section>
+        <section class="page-section">
+            <div class="page-wrap two-column">
+                <div class="copy-block">
+                    <span class="page-eyebrow">What I do</span>
+                    <div class="section-heading">
+                        <h2>From clean records to clear websites</h2>
+                    </div>
+                    <p>My data work includes data entry, lead generation, email research, web research, data cleanup,
+                        CRM updates, and administrative support. I also develop websites, including the Cielo Lending
+                        Source and Malik Freelancers projects shown in my portfolio.</p>
+                    <p>I aim to make the work easy to review: agree on the scope, keep communication direct, and deliver
+                        in a format or layout that fits the project.</p>
+                </div>
+                <div class="content-card">
+                    <h3>How I work</h3>
+                    <ul class="check-list">
+                        <li>Clarify what the finished work needs to do.</li>
+                        <li>Confirm scope, key details, and delivery expectations.</li>
+                        <li>Share progress when the project calls for it.</li>
+                        <li>Review the result and hand over organized deliverables.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section class="page-section alt">
+            <div class="page-wrap">
+                <div class="section-heading">
+                    <span class="page-eyebrow">Capabilities</span>
+                    <h2>Two service areas, one point of contact</h2>
+                    <p>Choose the kind of work you need help with and see the details on its service page.</p>
+                </div>
+                <div class="card-grid">
+                    <article class="content-card">
+                        <div class="card-mark">01</div>
+                        <h3>Data entry & research</h3>
+                        <p>Data entry, lead lists, email research, web research, data cleanup, CRM organization, and
+                            administrative support.</p>
+                        <p style="margin-top:18px"><a href="data-entry.html">Explore data services →</a></p>
+                    </article>
+                    <article class="content-card">
+                        <div class="card-mark">02</div>
+                        <h3>Web development</h3>
+                        <p>Business websites, portfolio sites, landing pages, responsive layouts, and redesigns.</p>
+                        <p style="margin-top:18px"><a href="web-development.html">Explore website services →</a></p>
+                    </article>
+                    <article class="content-card">
+                        <div class="card-mark">03</div>
+                        <h3>Clear project process</h3>
+                        <p>Start with a short project brief, align on the deliverable, then review the work before
+                            handoff.</p>
+                        <p style="margin-top:18px"><a href="contact.html">Discuss a project →</a></p>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <section class="page-section">
+            <div class="page-wrap page-cta">
+                <h2>Have a task or website in mind?</h2>
+                <p>Send a short note about the goal, timeline, and service area. I'll respond by email.</p>
+                <a class="page-button" href="contact.html">Contact Ali</a>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="#" class="logo">Ali<span>.</span>Raza</a>
+                <p>Data entry, research, CRM support, and website development for businesses and freelancers.</p>
+                <div class="footer-social">
+                    <a href="https://web.facebook.com/profile.php?id=61583412861151" target="_blank"
+                        rel="noopener noreferrer" aria-label="Facebook">
+
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="currentColor" aria-hidden="true">
+                            <path
+                                d="M18.77 2H15.5C12.22 2 10 4.13 10 7.5V10H7v4h3v8h4v-8h3.5l.5-4H14V7.7c0-1.15.32-1.7 1.7-1.7h3.07V2Z" />
+                        </svg>
+
+                    </a>
+                    <a href="https://www.fiverr.com/razaservices_va" target="_blank" aria-label="Fiverr"><i
+                            data-lucide="briefcase" style="width:18px;height:18px"></i></a>
+                    <a href="mailto:itsali327442@gmail.com" aria-label="Email"><i data-lucide="mail"
+                            style="width:18px;height:18px"></i></a>
+                    <a href="https://wa.me/923054496134" target="_blank" aria-label="WhatsApp"><i
+                            data-lucide="message-circle" style="width:18px;height:18px"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="data-entry.html">Data Entry</a></li>
+                    <li><a href="web-development.html">Web Development</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="#services">Data Entry</a></li>
+                    <li><a href="#services">Lead Generation</a></li>
+                    <li><a href="#services">Email Collection</a></li>
+                    <li><a href="#services">Web Research</a></li>
+                    <li><a href="data-entry.html">CRM Management</a></li>
+                    <li><a href="web-development.html">Web Development</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Contact</h4>
+                <ul>
+                    <li><a href="mailto:itsali327442@gmail.com">Email</a></li>
+                    <li><a href="https://wa.me/923054496134" target="_blank">WhatsApp</a></li>
+                    <li><a href="https://www.fiverr.com/razaservices_va" target="_blank">Fiverr Profile</a></li>
+                    <li><a href="https://web.facebook.com/profile.php?id=61583412861151" target="_blank">Facebook</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 Ali Raza. All rights reserved.</p>
+            <p>Data Entry Specialist & Web Developer</p>
+        </div>
+    </footer>
+</body>
+
+</html>
