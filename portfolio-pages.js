@@ -17,14 +17,16 @@
 
     /* ---------- Active link ---------- */
     function currentPage() {
-        var p = location.pathname.split('/').pop().replace(/\.html$/, '');
+        // handles /about, /about.html, /about/, /index.html and "/"
+        var parts = location.pathname.split('/').filter(Boolean);
+        var p = (parts.pop() || 'index').replace(/\.html$/, '');
         return p || 'index';
     }
 
     function markActive() {
         var page = currentPage();
         document.querySelectorAll('.navbar .nav-links a, .mobile-menu .nav-links a').forEach(function (a) {
-            var href = (a.getAttribute('href') || '').split('#')[0].split('?')[0].replace(/\.html$/, '');
+            var href = (a.getAttribute('href') || '').split('#')[0].split('?')[0].replace(/^\.?\//, '').replace(/\.html$/, '').replace(/\/$/, '');
             a.classList.toggle('active', href === page);
         });
     }
