@@ -4,6 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        // Skip the intro preloader if it already played in this browser session
+        try { if (sessionStorage.getItem('preloaderSeen')) document.documentElement.classList.add('no-preloader'); } catch (e) { }
+    </script>
     <title>Ali Raza | Data Entry Specialist & Web Developer</title>
     <meta name="description"
         content="Freelance data entry and web development services by Ali Raza. Explore lead generation, web research, CRM support, business websites, portfolio sites, and website redesigns.">
@@ -3461,8 +3465,149 @@
                 background: rgba(255, 255, 255, 0.06);
             }
         }
+        /* ===== Compact hero + About photo on tablets and phones ===== */
+        @media (max-width: 1024px) {
+            .hero-image-wrapper {
+                width: 300px;
+                aspect-ratio: auto;
+                height: auto;
+                margin: 0 auto;
+            }
+
+            .hero-image img {
+                width: 100%;
+                height: 360px;
+                border-radius: 24px;
+            }
+
+            .about-image {
+                max-width: 320px;
+                margin: 0 auto;
+            }
+
+            .about-image img {
+                width: 100%;
+                max-width: 100%;
+                height: auto;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero-image-wrapper {
+                width: 220px;
+            }
+
+            .hero-image img {
+                height: 260px;
+                border-radius: 20px;
+            }
+
+            .hero-image-wrapper::before {
+                inset: -6px;
+                border-radius: 26px;
+            }
+
+            .hero-container {
+                gap: 1.5rem;
+                padding: 1rem 1.25rem 2rem;
+            }
+
+            .about-image {
+                max-width: 240px;
+            }
+
+            .experience-badge {
+                right: -14px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-image-wrapper {
+                width: 180px;
+            }
+
+            .hero-image img {
+                height: 215px;
+            }
+
+            .about-image {
+                max-width: 200px;
+            }
+        }
+        /* Preloader already shown this session */
+        .no-preloader .preloader {
+            display: none !important;
+        }
+
+        /* ===== Group headings (Data entry / Web development) ===== */
+        .group-heading {
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
+            font-size: 1.25rem;
+            color: var(--dark-text);
+            margin: 0 0 1.25rem
+        }
+
+        .group-heading::before {
+            content: '';
+            width: 28px;
+            height: 3px;
+            border-radius: 2px;
+            background: var(--gold)
+        }
+
+        .group-heading.spaced {
+            margin-top: 3.5rem
+        }
+
+        .group-narrow {
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto
+        }
+
+        .faq-group-spacer {
+            max-width: 800px;
+            margin: 2.5rem auto 1.25rem
+        }
+
+        /* ===== Smaller "3+ Years" badge so it doesn't cover the photo ===== */
+        @media (max-width: 768px) {
+            .experience-badge {
+                right: -10px;
+                bottom: -18px;
+                padding: 0.6rem 0.9rem;
+                border-radius: 10px;
+            }
+
+            .experience-badge h3 {
+                font-size: 1.4rem;
+            }
+
+            .experience-badge p {
+                font-size: 0.7rem;
+                line-height: 1.25;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .experience-badge {
+                right: -8px;
+                bottom: -16px;
+                padding: 0.5rem 0.75rem;
+            }
+
+            .experience-badge h3 {
+                font-size: 1.2rem;
+            }
+
+            .experience-badge p {
+                font-size: 0.65rem;
+            }
+        }
     </style>
-    <link rel="stylesheet" href="portfolio-pages.css">
+    <link rel="stylesheet" href="portfolio-pages.css?v=4">
 </head>
 
 <body>
@@ -3548,8 +3693,7 @@
                 <div class="hero-image">
                     <div class="hero-image-wrapper">
                         <!-- Uploaded hero screenshot: market.png -->
-                        <img src="5.png" alt="Market research project screenshot from market.png" width="1093"
-                            height="362" fetchpriority="high">
+                        <img src="5.png" alt="Ali Raza, data entry specialist and web developer" width="540" height="450" fetchpriority="high">
                     </div>
                     <div class="floating-card card-1">
                         <div class="icon"><i data-lucide="database" style="width:20px;height:20px"></i></div>
@@ -3611,7 +3755,6 @@
             </div>
         </section>
 
-        ```html
         <section class="section timeline" id="experience">
             <div class="section-container">
                 <div class="section-header">
@@ -3771,7 +3914,7 @@
                             <div class="service-feature"><i data-lucide="check"
                                     style="width:16px;height:16px"></i><span>Prospect List Building</span></div>
                             <div class="service-feature"><i data-lucide="check"
-                                    style="width:16px;height:16px"></i><span>Verifeied Bussiness Leads</span></div>
+                                    style="width:16px;height:16px"></i><span>Verified Business Leads</span></div>
                             <div class="service-feature"><i data-lucide="check"
                                     style="width:16px;height:16px"></i><span>Targeted Lead Nurturing</span></div>
                             <div class="service-feature"><i data-lucide="check"
@@ -3838,9 +3981,10 @@
                     <h2 class="section-title">Technologies I Work With</h2>
                     <p class="section-subtitle">
                         Proficient in industry-standard tools and platforms to deliver
-                        high-quality data management solutions efficiently.
+                        high-quality data management and web development work efficiently.
                     </p>
                 </div>
+                <h3 class="group-heading">Data &amp; Research Tools</h3>
                 <div class="tools-grid">
                     <div class="tool-card">
                         <div class="tool-header">
@@ -4060,6 +4204,58 @@
                         </div>
                     </div>
                 </div>
+                <h3 class="group-heading spaced">Web Development Stack</h3>
+                <!-- EDIT: change levels and skills to match what you really use. -->
+                <div class="tools-grid">
+                    <div class="tool-card">
+                        <div class="tool-header">
+                            <div class="tool-icon" style="background: rgba(249,115,22,0.1);"><svg viewBox="0 0 24 24" fill="none" stroke="#f97316" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg></div>
+                            <div class="tool-info"><h3>HTML5 &amp; CSS3</h3><span class="tool-level advanced">Advanced</span></div>
+                        </div>
+                        <p>Clean, semantic markup and modern layouts</p>
+                        <div class="tool-skills"><span class="tool-skill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Semantic HTML</span><span class="tool-skill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Flexbox &amp; Grid</span><span class="tool-skill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Animations</span><span class="tool-skill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Dark Mode Themes</span></div>
+                    </div>
+                    <div class="tool-card" style="transition-delay: 100ms;">
+                        <div class="tool-header">
+                            <div class="tool-icon" style="background: rgba(234,179,8,0.12);"><svg viewBox="0 0 24 24" fill="none" stroke="#ca8a04" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg></div>
+                            <div class="tool-info"><h3>JavaScript</h3><span class="tool-level advanced">Advanced</span></div>
+                        </div>
+                        <p>Interactive features without unnecessary weight</p>
+                        <div class="tool-skills"><span class="tool-skill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>DOM Scripting</span><span class="tool-skill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Form Validation</span><span class="tool-skill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Scroll Effects</span><span class="tool-skill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Theme Toggles</span></div>
+                    </div>
+                    <div class="tool-card" style="transition-delay: 200ms;">
+                        <div class="tool-header">
+                            <div class="tool-icon" style="background: rgba(59,130,246,0.1);"><svg viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg></div>
+                            <div class="tool-info"><h3>Responsive Design</h3><span class="tool-level advanced">Advanced</span></div>
+                        </div>
+                        <p>Layouts that work on phones, tablets and desktops</p>
+                        <div class="tool-skills"><span class="tool-skill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Mobile-First</span><span class="tool-skill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Touch-Friendly Menus</span><span class="tool-skill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Cross-Browser Checks</span><span class="tool-skill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Fast Loading</span></div>
+                    </div>
+                    <div class="tool-card" style="transition-delay: 300ms;">
+                        <div class="tool-header">
+                            <div class="tool-icon" style="background: rgba(20,184,166,0.1);"><svg viewBox="0 0 24 24" fill="none" stroke="#14b8a6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg></div>
+                            <div class="tool-info"><h3>Hosting &amp; Deployment</h3><span class="tool-level advanced">Advanced</span></div>
+                        </div>
+                        <p>Publishing finished sites to the web</p>
+                        <div class="tool-skills"><span class="tool-skill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Netlify</span><span class="tool-skill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Custom Domains</span><span class="tool-skill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>HTTPS</span><span class="tool-skill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Live Deployment</span></div>
+                    </div>
+                    <div class="tool-card" style="transition-delay: 400ms;">
+                        <div class="tool-header">
+                            <div class="tool-icon" style="background: rgba(168,85,247,0.1);"><svg viewBox="0 0 24 24" fill="none" stroke="#a855f7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg></div>
+                            <div class="tool-info"><h3>Page Design &amp; Layout</h3><span class="tool-level advanced">Advanced</span></div>
+                        </div>
+                        <p>Turning ideas into clear, professional pages</p>
+                        <div class="tool-skills"><span class="tool-skill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Landing Pages</span><span class="tool-skill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Business Sites</span><span class="tool-skill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Portfolio Sites</span><span class="tool-skill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Redesigns</span></div>
+                    </div>
+                    <div class="tool-card" style="transition-delay: 500ms;">
+                        <div class="tool-header">
+                            <div class="tool-icon" style="background: rgba(99,102,241,0.1);"><svg viewBox="0 0 24 24" fill="none" stroke="#6366f1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg></div>
+                            <div class="tool-info"><h3>SEO &amp; Accessibility</h3><span class="tool-level advanced">Advanced</span></div>
+                        </div>
+                        <p>Foundations for search visibility and usability</p>
+                        <div class="tool-skills"><span class="tool-skill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Meta Tags</span><span class="tool-skill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Structured Data</span><span class="tool-skill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Image Alt Text</span><span class="tool-skill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Keyboard Access</span></div>
+                    </div>
+                </div>
                 <div class="tools-banner" style="transition-delay: 600ms;">
                     <div>
                         <h4>Need a specific tool or platform?</h4>
@@ -4172,8 +4368,18 @@
                         <div class="portfolio-content">
                             <span class="portfolio-tag">WEB DEVELOPMENT</span>
                             <h3>Cielo Lending Source</h3>
-                            <p>A website for a private real-estate lender, presenting loan programs, borrower
-                                information, and application links.</p>
+                            <div class="case-block">
+                                <h4><i data-lucide="target"></i>Client Requirement</h4>
+                                <p>A clear website for a private real-estate lender to present its loan programs and borrower information.</p>
+                            </div>
+                            <div class="case-block">
+                                <h4><i data-lucide="wrench"></i>My Work</h4>
+                                <p>Built a responsive website presenting loan programs, borrower information, and links to the online application.</p>
+                            </div>
+                            <div class="case-result">
+                                <p>Result: A live website where borrowers can explore programs and start an application.</p>
+                            </div>
+                            <div class="portfolio-tools"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Responsive Design</span></div>
                             <a href="https://mdhcielolending.com/" target="_blank" rel="noopener noreferrer">Visit live
                                 website ↗</a>
                         </div>
@@ -4190,8 +4396,18 @@
                         <div class="portfolio-content">
                             <span class="portfolio-tag">WEB DEVELOPMENT</span>
                             <h3>Malik Freelancers</h3>
-                            <p>A team website introducing data support services, the team, and ways to start a project.
-                            </p>
+                            <div class="case-block">
+                                <h4><i data-lucide="target"></i>Client Requirement</h4>
+                                <p>A team website to introduce a remote data support team and make it easy for clients to get in touch.</p>
+                            </div>
+                            <div class="case-block">
+                                <h4><i data-lucide="wrench"></i>My Work</h4>
+                                <p>Built a responsive website presenting the services, the team, and clear ways to start a project.</p>
+                            </div>
+                            <div class="case-result">
+                                <p>Result: A live website that introduces the team and gives prospective clients a clear contact path.</p>
+                            </div>
+                            <div class="portfolio-tools"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Responsive Design</span></div>
                             <a href="https://malik-freelancers.netlify.app/" target="_blank"
                                 rel="noopener noreferrer">Visit live website ↗</a>
                         </div>
@@ -4414,6 +4630,7 @@
                         ask for a custom quote.</p>
                 </div>
                 <!-- EDIT: adjust package names, prices, and deliverables to match your actual offers. -->
+                <h3 class="group-heading group-narrow">Data Entry &amp; Research</h3>
                 <div class="pricing-grid">
                     <div class="pricing-card">
                         <h3>Basic</h3>
@@ -4476,6 +4693,40 @@
                             Quote</a>
                     </div>
                 </div>
+                <h3 class="group-heading group-narrow spaced">Web Development</h3>
+                <!-- EDIT: PLACEHOLDER PRICES AND DELIVERABLES - replace with your real offers before publishing. -->
+                <div class="pricing-grid">
+                    <div class="pricing-card">
+                        
+                        <h3>Landing Page</h3>
+                        <p style="color:var(--gray);font-size:0.9rem">Single-Page Website</p>
+                        <div class="price">$120<span>/project</span></div>
+                        <ul class="pricing-features">
+                            <li><i data-lucide="check" style="width:16px;height:16px"></i>One responsive page</li><li><i data-lucide="check" style="width:16px;height:16px"></i>Contact form or email / WhatsApp link</li><li><i data-lucide="check" style="width:16px;height:16px"></i>Basic SEO setup</li><li><i data-lucide="check" style="width:16px;height:16px"></i>1 revision round</li>
+                        </ul>
+                        <a href="#contact" class="btn-secondary" style="width:100%;justify-content:center">Get Started</a>
+                    </div>
+                    <div class="pricing-card popular">
+                        <div class="popular-badge">MOST POPULAR</div>
+                        <h3>Business Website</h3>
+                        <p style="color:var(--gray);font-size:0.9rem">Multi-Page Website</p>
+                        <div class="price">$300<span>/project</span></div>
+                        <ul class="pricing-features">
+                            <li><i data-lucide="check" style="width:16px;height:16px"></i>Up to 5 responsive pages</li><li><i data-lucide="check" style="width:16px;height:16px"></i>Contact form</li><li><i data-lucide="check" style="width:16px;height:16px"></i>SEO basics and meta tags</li><li><i data-lucide="check" style="width:16px;height:16px"></i>3 revision rounds</li><li><i data-lucide="check" style="width:16px;height:16px"></i>Help publishing the site</li>
+                        </ul>
+                        <a href="#contact" class="btn-primary" style="width:100%;justify-content:center">Get Started</a>
+                    </div>
+                    <div class="pricing-card">
+                        
+                        <h3>Redesign / Custom</h3>
+                        <p style="color:var(--gray);font-size:0.9rem">Custom Web Solution</p>
+                        <div class="price">Custom<span>/quote</span></div>
+                        <ul class="pricing-features">
+                            <li><i data-lucide="check" style="width:16px;height:16px"></i>Redesign of an existing website</li><li><i data-lucide="check" style="width:16px;height:16px"></i>Extra pages or features</li><li><i data-lucide="check" style="width:16px;height:16px"></i>Timeline agreed before work starts</li><li><i data-lucide="check" style="width:16px;height:16px"></i>Ongoing updates available</li>
+                        </ul>
+                        <a href="#contact" class="btn-secondary" style="width:100%;justify-content:center">Get a Custom Quote</a>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -4486,6 +4737,7 @@
                     <h2 class="section-title">Common Questions</h2>
                     <p class="section-subtitle">Everything you need to know about working with me.</p>
                 </div>
+                <div class="faq-group-spacer" style="margin-top:0"><h3 class="group-heading" style="margin:0">Data Entry &amp; General</h3></div>
                 <div class="faq-grid">
                     <div class="faq-item">
                         <button type="button" class="faq-question" aria-expanded="false">What is your typical turnaround
@@ -4530,6 +4782,30 @@
                         <div class="faq-answer">Yes! I offer discounted rates for ongoing contracts and large-volume
                             projects. Contact me for a custom quote based on your specific requirements and volume.
                         </div>
+                    </div>
+                </div>
+                <div class="faq-group-spacer"><h3 class="group-heading" style="margin:0">Web Development</h3></div>
+                <!-- EDIT: check these answers match how you really work. -->
+                <div class="faq-grid">
+                    <div class="faq-item">
+                        <button type="button" class="faq-question" aria-expanded="false">How long does a website take?<i data-lucide="chevron-down" style="width:20px;height:20px" aria-hidden="true"></i></button>
+                        <div class="faq-answer">It depends on the size of the site. A single-page website is quicker than a multi-page business site, and I confirm a timeline with you before starting.</div>
+                    </div>
+                    <div class="faq-item">
+                        <button type="button" class="faq-question" aria-expanded="false">Which technologies do you use?<i data-lucide="chevron-down" style="width:20px;height:20px" aria-hidden="true"></i></button>
+                        <div class="faq-answer">I build with HTML5, CSS3 and JavaScript for clean, fast websites, and I recommend only what your project actually needs rather than adding unnecessary complexity.</div>
+                    </div>
+                    <div class="faq-item">
+                        <button type="button" class="faq-question" aria-expanded="false">Will my website work on mobile?<i data-lucide="chevron-down" style="width:20px;height:20px" aria-hidden="true"></i></button>
+                        <div class="faq-answer">Yes. Every site is built to be responsive and is checked on phone, tablet and desktop screen sizes.</div>
+                    </div>
+                    <div class="faq-item">
+                        <button type="button" class="faq-question" aria-expanded="false">Can you redesign my existing website?<i data-lucide="chevron-down" style="width:20px;height:20px" aria-hidden="true"></i></button>
+                        <div class="faq-answer">Yes. I can refresh the design, improve the layout and mobile experience, and keep the content that already works well.</div>
+                    </div>
+                    <div class="faq-item">
+                        <button type="button" class="faq-question" aria-expanded="false">Do you help with hosting and publishing?<i data-lucide="chevron-down" style="width:20px;height:20px" aria-hidden="true"></i></button>
+                        <div class="faq-answer">I can help publish the finished site, for example on Netlify, and connect a domain. Any domain or hosting fees are paid to the provider.</div>
                     </div>
                 </div>
             </div>
@@ -4771,16 +5047,15 @@
         </div>
     </div>
 
-    <button id="chat-toggle" type="button" aria-label="Open contact chat">
-        <span class="launcher-icon">☏</span>
-        Chat with me
+    <button id="chat-toggle" type="button" aria-label="Chat with me" title="Chat with me">
+        <img class="launcher-img" src="support-emoji.png" alt="" width="70" height="70">
     </button>
 
     <style>
         #contact-chat {
             position: fixed;
             right: 18px;
-            bottom: 82px;
+            bottom: 100px;
             width: min(320px, calc(100vw - 28px));
             box-sizing: border-box;
             background: #f1f1f1;
@@ -4948,25 +5223,46 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 8px;
-            padding: 14px 20px;
-            border: none;
-            border-radius: 28px;
-            background: #18bd59;
-            color: white;
-            font: 700 14px Arial, sans-serif;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, .18);
+            width: 70px;
+            height: 70px;
+            padding: 0;
+            border: 0;
+            border-radius: 50%;
+            background: transparent;
+            box-shadow: none;
             cursor: pointer;
+            transition: transform .25s ease;
+            animation: chatBob 3s ease-in-out infinite;
         }
 
-        #chat-toggle .launcher-icon {
-            font-size: 19px;
+        #chat-toggle:hover {
+            transform: scale(1.12);
+        }
+
+        #chat-toggle .launcher-img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            filter: drop-shadow(0 6px 10px rgba(0, 0, 0, .28));
+            pointer-events: none;
+        }
+
+        @keyframes chatBob {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-5px); }
+        }
+
+        /* Keep the back-to-top button clear of the chat button */
+        .back-to-top {
+            bottom: 6.2rem !important;
+            right: 1.6rem !important;
         }
 
         @media (max-width: 400px) {
             #contact-chat {
                 right: 10px;
-                bottom: 76px;
+                bottom: 96px;
                 width: calc(100vw - 20px);
             }
 
@@ -5101,6 +5397,7 @@
         window.addEventListener('load', () => {
             setTimeout(() => {
                 document.getElementById('preloader').classList.add('hidden');
+                try { sessionStorage.setItem('preloaderSeen', '1'); } catch (e) { }
             }, 1800);
         });
 
@@ -5271,7 +5568,8 @@
                 if (window.scrollY >= sectionTop) current = section.getAttribute('id');
             });
             document.querySelectorAll('.nav-links a').forEach(link => {
-                link.classList.toggle('active', link.getAttribute('href') === '#' + current);
+                const h = link.getAttribute('href') || '';
+                if (h.startsWith('#')) link.classList.toggle('active', h === '#' + current);
             });
         });
 
