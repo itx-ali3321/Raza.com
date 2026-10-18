@@ -11,7 +11,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="icon" type="image/svg+xml"
         href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231e3a5f'/%3E%3Ctext x='32' y='42' font-family='Arial,sans-serif' font-size='28' font-weight='700' fill='%23d4af37' text-anchor='middle'%3EAR%3C/text%3E%3C/svg%3E">
-    <script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+    <link rel="preconnect" href="https://unpkg.com" crossorigin>
+    <script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js" defer></script>
     <script type="application/ld+json">
     {"@context":"https://schema.org","@type":"Person","name":"Ali Raza","jobTitle":"Data Entry Specialist and Web Developer","description":"Freelance data entry, research, CRM support, and website development services.","email":"itsali327442@gmail.com","telephone":"+923054496134","address":{"@type":"PostalAddress","addressCountry":"PK"},"sameAs":["https://www.fiverr.com/razaservices_va","https://web.facebook.com/profile.php?id=61583412861151"]}
     </script>
@@ -200,9 +201,60 @@
                 transform: none
             }
         }
+        /* ===== Live previews load only when needed ===== */
+        .project-preview-wrap {
+            position: relative;
+            height: 290px;
+            display: grid;
+            place-items: center;
+            overflow: hidden;
+            border-bottom: 1px solid var(--page-line);
+            background: linear-gradient(140deg, #173b5f, #0f766e)
+        }
+
+        .project-preview-wrap iframe {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+            background: #fff
+        }
+
+        .preview-facade {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.6rem;
+            padding: 1.25rem;
+            text-align: center;
+            color: #fff
+        }
+
+        .preview-facade strong {
+            font: 700 1.25rem Poppins, Inter, sans-serif
+        }
+
+        .preview-facade span {
+            font-size: 0.88rem;
+            opacity: 0.85
+        }
+
+        .preview-facade button[disabled] {
+            opacity: 0.7;
+            cursor: progress
+        }
+
+        @media (max-width: 640px) {
+            .project-preview-wrap {
+                height: 240px
+            }
+        }
     </style>
     <script>
-        window.addEventListener('load', function () {
+        document.addEventListener('DOMContentLoaded', function () {
             if (window.lucide) lucide.createIcons();
         });
     </script>
@@ -253,9 +305,13 @@
                 </div>
                 <div class="project-grid">
                     <article class="project-card">
-                        <iframe class="project-preview" src="https://mdhcielolending.com/"
-                            title="Live preview of the Cielo Lending Source website" loading="lazy"
-                            referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                        <div class="project-preview-wrap" data-preview-src="https://mdhcielolending.com/" data-preview-title="Live preview of the Cielo Lending Source website">
+                            <div class="preview-facade">
+                                <strong>Cielo Lending Source</strong>
+                                <span>Private real-estate lending website</span>
+                                <button type="button" class="page-button secondary preview-load">Load live preview</button>
+                            </div>
+                        </div>
                         <div class="project-card-body"><span class="project-tag">Business website</span>
                             <h3>Cielo Lending Source</h3>
                             <p>Private real-estate lending website presenting loan programs, borrower information, and
@@ -265,9 +321,13 @@
                         </div>
                     </article>
                     <article class="project-card">
-                        <iframe class="project-preview" src="https://malik-freelancers.netlify.app/"
-                            title="Live preview of the Malik Freelancers website" loading="lazy"
-                            referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                        <div class="project-preview-wrap" data-preview-src="https://malik-freelancers.netlify.app/" data-preview-title="Live preview of the Malik Freelancers website">
+                            <div class="preview-facade">
+                                <strong>Malik Freelancers</strong>
+                                <span>Remote data-support team website</span>
+                                <button type="button" class="page-button secondary preview-load">Load live preview</button>
+                            </div>
+                        </div>
                         <div class="project-card-body"><span class="project-tag">Team website</span>
                             <h3>Malik Freelancers</h3>
                             <p>Remote data-support team website presenting services, team profiles, and a contact path
@@ -394,6 +454,45 @@
             <p>Data Entry Specialist & Web Developer</p>
         </div>
     </footer>
+    <script>
+        // Load the live website previews only when they are scrolled into view (after the page itself has loaded),
+        // or when the visitor presses the button. Loading two full websites up-front is what made this page slow.
+        (function () {
+            var wraps = document.querySelectorAll('[data-preview-src]');
+
+            function loadPreview(wrap) {
+                if (wrap.dataset.loaded) return;
+                wrap.dataset.loaded = '1';
+                var facade = wrap.querySelector('.preview-facade');
+                var btn = wrap.querySelector('.preview-load');
+                if (btn) { btn.disabled = true; btn.textContent = 'Loading preview...'; }
+                var frame = document.createElement('iframe');
+                frame.title = wrap.dataset.previewTitle || 'Live website preview';
+                frame.referrerPolicy = 'strict-origin-when-cross-origin';
+                frame.addEventListener('load', function () { if (facade) facade.style.display = 'none'; });
+                frame.src = wrap.dataset.previewSrc;
+                wrap.appendChild(frame);
+            }
+
+            wraps.forEach(function (wrap) {
+                var btn = wrap.querySelector('.preview-load');
+                if (btn) btn.addEventListener('click', function () { loadPreview(wrap); });
+            });
+
+            if ('IntersectionObserver' in window) {
+                var io = new IntersectionObserver(function (entries) {
+                    entries.forEach(function (entry) {
+                        if (!entry.isIntersecting) return;
+                        io.unobserve(entry.target);
+                        var go = function () { setTimeout(function () { loadPreview(entry.target); }, 400); };
+                        if (document.readyState === 'complete') go();
+                        else window.addEventListener('load', go, { once: true });
+                    });
+                }, { threshold: 0.35 });
+                wraps.forEach(function (wrap) { io.observe(wrap); });
+            }
+        })();
+    </script>
 </body>
 
 </html>
