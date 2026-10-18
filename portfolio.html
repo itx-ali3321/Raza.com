@@ -1,0 +1,532 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ali Raza | Portfolio</title>
+    <meta name="description" content="Selected data support case studies and live website projects by Ali Raza.">
+    <link rel="canonical" href="https://aliiraza.netlify.app/portfolio.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231e3a5f'/%3E%3Ctext x='32' y='42' font-family='Arial,sans-serif' font-size='28' font-weight='700' fill='%23d4af37' text-anchor='middle'%3EAR%3C/text%3E%3C/svg%3E">
+    <link rel="preconnect" href="https://unpkg.com" crossorigin>
+    <script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js" defer></script>
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"Person","name":"Ali Raza","jobTitle":"Data Entry Specialist and Web Developer","description":"Freelance data entry, research, CRM support, and website development services.","email":"itsali327442@gmail.com","telephone":"+923054496134","address":{"@type":"PostalAddress","addressCountry":"PK"},"sameAs":["https://www.fiverr.com/razaservices_va","https://web.facebook.com/profile.php?id=61583412861151"]}
+    </script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="portfolio-pages.css?v=6">
+    <script src="portfolio-pages.js?v=6" defer></script>
+    <style>
+        /* ===== Footer: variables ===== */
+        :root {
+            --primary: #1e3a5f;
+            --secondary: #0f766e;
+            --gold: #d4af37;
+            --dark: #0f172a;
+            --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        [data-theme="dark"] {
+            --primary: #60a5fa;
+            --secondary: #2dd4bf;
+            --gold: #fbbf24;
+        }
+
+        /* ===== Footer: logo ===== */
+        .logo {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
+            position: relative;
+            overflow: hidden
+        }
+
+        .logo span {
+            color: var(--gold)
+        }
+
+        /* ===== Footer ===== */
+        .footer {
+            background: #0f172a;
+            color: white;
+            padding: 4rem 2rem 2rem;
+            position: relative;
+            overflow: hidden
+        }
+
+        .footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary), var(--gold), var(--secondary))
+        }
+
+        .footer-grid {
+            max-width: 1280px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 3rem
+        }
+
+        .footer-brand .logo {
+            color: white;
+            margin-bottom: 1rem;
+            display: inline-block
+        }
+
+        .footer-brand p {
+            color: #94a3b8;
+            font-size: 0.95rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 0.75rem
+        }
+
+        .footer-social a {
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            transition: var(--transition);
+            text-decoration: none
+        }
+
+        .footer-social a:hover {
+            background: var(--primary);
+            transform: translateY(-3px)
+        }
+
+        .footer-links h4 {
+            font-size: 1rem;
+            margin-bottom: 1.5rem;
+            color: white
+        }
+
+        .footer-links ul {
+            list-style: none
+        }
+
+        .footer-links li {
+            margin-bottom: 0.75rem
+        }
+
+        .footer-links a {
+            color: #94a3b8;
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: var(--transition);
+            position: relative
+        }
+
+        .footer-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background: var(--gold);
+            transition: width 0.3s ease
+        }
+
+        .footer-links a:hover {
+            color: white
+        }
+
+        .footer-links a:hover::after {
+            width: 100%
+        }
+
+        .footer-bottom {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center
+        }
+
+        .footer-bottom p {
+            color: #94a3b8;
+            font-size: 0.875rem
+        }
+
+        /* ===== Footer: responsive ===== */
+        @media (max-width:1024px) {
+            .footer-grid {
+                grid-template-columns: 1fr 1fr
+            }
+        }
+
+        @media (max-width:768px) {
+            .footer {
+                padding: 3rem 1.25rem 1.5rem
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                gap: 1rem;
+                text-align: center
+            }
+        }
+
+        /* Touch devices: disable hover transform */
+        @media (hover:none) and (pointer:coarse) {
+            .footer-social a:hover {
+                transform: none
+            }
+        }
+        /* ===== Live previews load only when needed ===== */
+        .project-preview-wrap {
+            position: relative;
+            height: 290px;
+            display: grid;
+            place-items: center;
+            overflow: hidden;
+            border-bottom: 1px solid var(--page-line);
+            background: linear-gradient(140deg, #173b5f, #0f766e)
+        }
+
+        .project-preview-wrap iframe {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+            background: #fff
+        }
+
+        .preview-facade {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.6rem;
+            padding: 1.25rem;
+            text-align: center;
+            color: #fff
+        }
+
+        .preview-facade strong {
+            font: 700 1.25rem Poppins, Inter, sans-serif
+        }
+
+        .preview-facade span {
+            font-size: 0.88rem;
+            opacity: 0.85
+        }
+
+        .preview-facade button[disabled] {
+            opacity: 0.7;
+            cursor: progress
+        }
+
+        @media (max-width: 640px) {
+            .project-preview-wrap {
+                height: 240px
+            }
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            if (window.lucide) lucide.createIcons();
+        });
+    </script>
+    <style>
+        /* Active nav link: lives in the page itself so it never depends on cached CSS/JS */
+        @media (min-width: 769px) {
+            .navbar .nav-links a[aria-current="page"] {
+                color: #ffffff;
+                background: linear-gradient(135deg, #1e3a5f, #2d5a8a);
+                box-shadow: 0 4px 14px rgba(30, 58, 95, 0.3);
+            }
+            .navbar .nav-links a[aria-current="page"]::before {
+                content: "";
+                display: inline-block;
+                width: 6px;
+                height: 6px;
+                margin-right: 7px;
+                vertical-align: middle;
+                border-radius: 50%;
+                background: #d4af37;
+            }
+            [data-theme="dark"] .navbar .nav-links a[aria-current="page"] {
+                color: #0f172a;
+                background: linear-gradient(135deg, #60a5fa, #93c5fd);
+            }
+        }
+        .mobile-menu .nav-links a[aria-current="page"] {
+            color: #1e3a5f;
+            background: rgba(30, 58, 95, 0.07);
+            border-left-color: #d4af37;
+            padding-left: 1.1rem;
+        }
+        [data-theme="dark"] .mobile-menu .nav-links a[aria-current="page"] {
+            color: #93c5fd;
+            background: rgba(96, 165, 250, 0.12);
+        }
+    </style>
+</head>
+
+<body class="portfolio-page">
+    <header class="site-header">
+        <nav class="navbar" id="navbar">
+            <div class="nav-container">
+                <a href="index.html" class="logo">Ali<span>.</span>Raza</a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="data-entry.html">Data Entry</a></li>
+                    <li><a href="web-development.html">Web Development</a></li>
+                    <li><a href="portfolio.html" aria-current="page">Portfolio</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div style="display:flex;align-items:center;gap:1rem">
+                    <button class="theme-toggle" id="themeToggle" onclick="toggleTheme()"
+                        aria-label="Toggle dark mode"><i data-lucide="moon" id="themeIcon"
+                            style="width:18px;height:18px"></i></button>
+                    <a href="contact.html" class="nav-cta">Hire Me</a>
+                    <button class="mobile-menu-btn" id="mobileMenuBtn" onclick="openMenu()" aria-label="Open menu"
+                        aria-expanded="false" aria-controls="mobileMenu"><i data-lucide="menu"
+                            style="width:24px;height:24px"></i></button>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="page-hero">
+            <div class="page-wrap page-hero-inner">
+                <span class="page-eyebrow">Portfolio</span>
+                <h1>Selected work across <span>data and websites.</span></h1>
+                <p class="page-lead">Browse data-work examples from the supplied portfolio and open the two live
+                    websites built for web-development projects.</p>
+                <div class="page-actions"><a class="page-button" href="#web-work">Website projects</a><a
+                        class="page-button secondary" href="#data-work">Data work</a></div>
+            </div>
+        </section>
+        <section class="page-section" id="web-work">
+            <div class="page-wrap">
+                <div class="section-heading"><span class="page-eyebrow">Web development</span>
+                    <h2>Live website projects</h2>
+                    <p>Previews show the published sites. Use the links below each preview to open the complete website.
+                    </p>
+                </div>
+                <div class="project-grid">
+                    <article class="project-card">
+                        <div class="project-preview-wrap" data-preview-src="https://mdhcielolending.com/" data-preview-title="Live preview of the Cielo Lending Source website">
+                            <div class="preview-facade">
+                                <strong>Cielo Lending Source</strong>
+                                <span>Private real-estate lending website</span>
+                                <button type="button" class="page-button secondary preview-load">Load live preview</button>
+                            </div>
+                        </div>
+                        <div class="project-card-body"><span class="project-tag">Business website</span>
+                            <h3>Cielo Lending Source</h3>
+                            <p>Private real-estate lending website presenting loan programs, borrower information, and
+                                an online application path.</p><a class="page-button"
+                                href="https://mdhcielolending.com/" target="_blank" rel="noopener noreferrer">Open live
+                                website ↗</a>
+                        </div>
+                    </article>
+                    <article class="project-card">
+                        <div class="project-preview-wrap" data-preview-src="https://malik-freelancers.netlify.app/" data-preview-title="Live preview of the Malik Freelancers website">
+                            <div class="preview-facade">
+                                <strong>Malik Freelancers</strong>
+                                <span>Remote data-support team website</span>
+                                <button type="button" class="page-button secondary preview-load">Load live preview</button>
+                            </div>
+                        </div>
+                        <div class="project-card-body"><span class="project-tag">Team website</span>
+                            <h3>Malik Freelancers</h3>
+                            <p>Remote data-support team website presenting services, team profiles, and a contact path
+                                for prospective clients.</p><a class="page-button"
+                                href="https://malik-freelancers.netlify.app/" target="_blank"
+                                rel="noopener noreferrer">Open live website ↗</a>
+                        </div>
+                    </article>
+                </div>
+                <p style="margin-top:16px;color:var(--page-muted);font-size:.9rem">External previews may be restricted
+                    by the website provider or browser; the live-site links remain available.</p>
+            </div>
+        </section>
+        <section class="page-section alt" id="data-work">
+            <div class="page-wrap">
+                <div class="section-heading"><span class="page-eyebrow">Data support</span>
+                    <h2>Data and research case studies</h2>
+                    <p>Examples of the workflows and deliverables described in the existing portfolio source.</p>
+                </div>
+                <div class="case-list">
+                    <article class="case-card"><span class="case-type">Lead generation</span>
+                        <div>
+                            <h3>B2B Lead Database</h3>
+                            <p><strong>Need:</strong> Build a targeted database of potential business prospects.</p>
+                            <p><strong>Work:</strong> Research companies, collect decision-maker details, organize
+                                contact information, remove duplicates, and format the database.</p>
+                            <p><strong>Delivery:</strong> A clean, structured, CRM-ready lead database. Tools named in
+                                the source: Google Search, LinkedIn, Google Sheets, and Excel.</p>
+                        </div>
+                    </article>
+                    <article class="case-card"><span class="case-type">Data entry</span>
+                        <div>
+                            <h3>Customer Records Cleanup</h3>
+                            <p><strong>Need:</strong> Consolidate customer records from multiple files into one
+                                organized sheet.</p>
+                            <p><strong>Work:</strong> Merge files, standardize formats, remove duplicates, validate
+                                entries, and apply consistent formatting.</p>
+                            <p><strong>Delivery:</strong> A deduplicated master sheet ready for reporting. Tools named
+                                in the source: Google Sheets, Excel, and data validation.</p>
+                        </div>
+                    </article>
+                    <article class="case-card"><span class="case-type">Web research</span>
+                        <div>
+                            <h3>Market Research Database</h3>
+                            <p><strong>Need:</strong> Gather competitor and market information for a business planning
+                                report.</p>
+                            <p><strong>Work:</strong> Research competitors, collect pricing and positioning information,
+                                verify sources, and organize findings into a structured database.</p>
+                            <p><strong>Delivery:</strong> A sourced research database. Tools named in the source: Google
+                                Search, Excel, and source verification.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <section class="page-section">
+            <div class="page-wrap page-cta">
+                <h2>Need a project like one of these?</h2>
+                <p>Tell me whether the work is data support or web development and what a useful result looks like.</p>
+                <a class="page-button" href="contact.html">Discuss your project</a>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="index.html" class="logo">Ali<span>.</span>Raza</a>
+                <p>Data entry, research, CRM support, and website development for businesses and freelancers.</p>
+                <div class="footer-social">
+                    <a href="https://web.facebook.com/profile.php?id=61583412861151" target="_blank"
+                        rel="noopener noreferrer" aria-label="Facebook">
+
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="currentColor" aria-hidden="true">
+                            <path
+                                d="M18.77 2H15.5C12.22 2 10 4.13 10 7.5V10H7v4h3v8h4v-8h3.5l.5-4H14V7.7c0-1.15.32-1.7 1.7-1.7h3.07V2Z" />
+                        </svg>
+
+                    </a>
+                    <a href="https://www.fiverr.com/razaservices_va" target="_blank" aria-label="Fiverr"><i
+                            data-lucide="briefcase" style="width:18px;height:18px"></i></a>
+                    <a href="mailto:itsali327442@gmail.com" aria-label="Email"><i data-lucide="mail"
+                            style="width:18px;height:18px"></i></a>
+                    <a href="https://wa.me/923054496134" target="_blank" aria-label="WhatsApp"><i
+                            data-lucide="message-circle" style="width:18px;height:18px"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="data-entry.html">Data Entry</a></li>
+                    <li><a href="web-development.html">Web Development</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="index.html#services">Data Entry</a></li>
+                    <li><a href="index.html#services">Lead Generation</a></li>
+                    <li><a href="index.html#services">Email Collection</a></li>
+                    <li><a href="index.html#services">Web Research</a></li>
+                    <li><a href="data-entry.html">CRM Management</a></li>
+                    <li><a href="web-development.html">Web Development</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Contact</h4>
+                <ul>
+                    <li><a href="mailto:itsali327442@gmail.com">Email</a></li>
+                    <li><a href="https://wa.me/923054496134" target="_blank">WhatsApp</a></li>
+                    <li><a href="https://www.fiverr.com/razaservices_va" target="_blank">Fiverr Profile</a></li>
+                    <li><a href="https://web.facebook.com/profile.php?id=61583412861151" target="_blank">Facebook</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 Ali Raza. All rights reserved.</p>
+            <p>Data Entry Specialist & Web Developer</p>
+        </div>
+    </footer>
+    <script>
+        // Load the live website previews only when they are scrolled into view (after the page itself has loaded),
+        // or when the visitor presses the button. Loading two full websites up-front is what made this page slow.
+        (function () {
+            var wraps = document.querySelectorAll('[data-preview-src]');
+
+            function loadPreview(wrap) {
+                if (wrap.dataset.loaded) return;
+                wrap.dataset.loaded = '1';
+                var facade = wrap.querySelector('.preview-facade');
+                var btn = wrap.querySelector('.preview-load');
+                if (btn) { btn.disabled = true; btn.textContent = 'Loading preview...'; }
+                var frame = document.createElement('iframe');
+                frame.title = wrap.dataset.previewTitle || 'Live website preview';
+                frame.referrerPolicy = 'strict-origin-when-cross-origin';
+                frame.addEventListener('load', function () { if (facade) facade.style.display = 'none'; });
+                frame.src = wrap.dataset.previewSrc;
+                wrap.appendChild(frame);
+            }
+
+            wraps.forEach(function (wrap) {
+                var btn = wrap.querySelector('.preview-load');
+                if (btn) btn.addEventListener('click', function () { loadPreview(wrap); });
+            });
+
+            if ('IntersectionObserver' in window) {
+                var io = new IntersectionObserver(function (entries) {
+                    entries.forEach(function (entry) {
+                        if (!entry.isIntersecting) return;
+                        io.unobserve(entry.target);
+                        var go = function () { setTimeout(function () { loadPreview(entry.target); }, 400); };
+                        if (document.readyState === 'complete') go();
+                        else window.addEventListener('load', go, { once: true });
+                    });
+                }, { threshold: 0.35 });
+                wraps.forEach(function (wrap) { io.observe(wrap); });
+            }
+        })();
+    </script>
+</body>
+
+</html>
